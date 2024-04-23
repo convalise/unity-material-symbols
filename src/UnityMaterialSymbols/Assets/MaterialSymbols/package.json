@@ -1,0 +1,11 @@
+{
+  "name": "com.convalise.unity-material-symbols",
+  "version": "166.0.0",
+  "displayName": "Unity Material Symbols",
+  "description": "This project simplifies the usage of Google's Material Design icons on Unity.",
+  "keywords": [ "unity", "google", "material", "icons", "symbols" ],
+  "author": "conrado <convalise@gmail.com> (https://github.com/convalise)",
+  "documentationUrl": "https://github.com/convalise/unity-material-symbols#documentation",
+  "changelogUrl": "https://github.com/convalise/unity-material-symbols/releases",
+  "licensesUrl": "https://github.com/convalise/unity-material-symbols/blob/master/LICENSE"
+}

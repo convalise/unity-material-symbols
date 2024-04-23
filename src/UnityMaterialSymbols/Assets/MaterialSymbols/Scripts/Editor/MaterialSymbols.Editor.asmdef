@@ -1,0 +1,18 @@
+{
+    "name": "MaterialSymbols.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:61e38570089879244a10368059b06783"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
