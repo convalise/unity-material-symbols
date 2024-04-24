@@ -393,6 +393,7 @@ warning e002
 warning e8b2
 warning f083
 warning_off f7ad
+add_triangle f48e
 square eb36
 rectangle eb54
 capture f727
@@ -650,6 +651,7 @@ compare e3b9
 tv_guide e1dc
 post e705
 photo_prints efb2
+animated_images f49a
 photo_auto_merge f530
 note_stack_add f563
 note_stack f562
@@ -919,6 +921,7 @@ mail e0be
 mail e0e1
 mail e158
 mail e159
+mail_off f48b
 unsubscribe e0eb
 forward_to_inbox f187
 mail_lock ec0a
@@ -1014,12 +1017,16 @@ keyboard_hide e31a
 keyboard_alt f028
 keyboard e312
 keyboard_off f67a
+keyboard_lock f492
+keyboard_lock_off f491
 keyboard_previous_language f7da
 keyboard_onscreen f7db
 keyboard_full f7dc
 keyboard_external_input f7dd
 keyboard_keys f67b
 mouse e323
+mouse_lock f490
+mouse_lock_off f48f
 touchpad_mouse f687
 touchpad_mouse_off f4e6
 trackpad_input f4c7
@@ -1929,6 +1936,9 @@ text_rotation_down e93e
 text_rotation_none e93f
 text_format e165
 format_letter_spacing_2 f618
+lowercase f48a
+uppercase f488
+titlecase f489
 text_up e6a7
 text_up f49e
 format_letter_spacing_wider f615
@@ -1969,6 +1979,12 @@ h_mobiledata f018
 h_plus_mobiledata f019
 lte_mobiledata f02c
 lte_plus_mobiledata f02d
+speed_0_2x f498
+speed_0_5x f497
+speed_0_7x f496
+speed_1_2x f495
+speed_1_5x f494
+speed_1_7x f493
 speed_2x f4eb
 speed_1_5 f4e0
 speed_1_2 f4e1
@@ -2842,6 +2858,7 @@ movie e02c
 movie e404
 movie_filter e43a
 movie_edit f840
+movie_off f499
 videocam e04b
 videocam_off e04c
 privacy f148
