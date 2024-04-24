@@ -27,7 +27,7 @@ https://github.com/convalise/unity-material-symbols.git?path=/src/UnityMaterialS
 
 Download the package from the [latest release](https://github.com/convalise/unity-material-symbols/releases/latest) and import into your project as usual.
 
-On Unity 2018 or lower, you might need to delete the `asmdef` files inside the Scripts and Editor folders.
+On Unity 2018 or lower, you might need to delete the `asmdef` files inside the Scripts folder.
 
 ### Usage
 
@@ -105,7 +105,7 @@ Thank you, I'd love that! You can warm my heart on this [Ko-fi link](https://ko-
 
 ## Credits
 
-This project was created by Conrado (https://github.com/convalise).
+This project was created by Conrado (https://github.com/convalise) as an improvement of the deprecated [Unity Material Icons](https://github.com/convalise/unity-material-icons).
 
 It makes usage of the [Material Design icons by Google (Material Symbols)](https://github.com/google/material-design-icons).\
-More information on the Google's project can be found at the [Material Icons Guide](https://developers.google.com/fonts/docs/material_icons).
+More information on the Google's project can be found at the [Material Symbols Guide](https://developers.google.com/fonts/docs/material_symbols).
