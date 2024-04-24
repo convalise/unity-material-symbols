@@ -14,12 +14,11 @@ public class MaterialSymbolEditor : UnityEditor.UI.TextEditor
 	private SerializedProperty spSymbol;
 	private SerializedProperty spFill;
 	private SerializedProperty spScale;
-	private SerializedProperty spColor;
-	private SerializedProperty spMaterial;
-	private SerializedProperty spRaycastTarget;
 	private SerializedProperty spAlignment;
 
 	private FontDataDrawer pdFontData;
+
+	private GUIStyle gsPreviewSymbol;
 
 	protected override void OnEnable()
 	{
@@ -28,12 +27,13 @@ public class MaterialSymbolEditor : UnityEditor.UI.TextEditor
 		spSymbol = serializedObject.FindProperty("_symbol");
 		spFill = serializedObject.FindProperty("_symbol.fill");
 		spScale = serializedObject.FindProperty("_scale");
-		spColor = serializedObject.FindProperty("m_Color");
-		spMaterial = serializedObject.FindProperty("m_Material");
-		spRaycastTarget = serializedObject.FindProperty("m_RaycastTarget");
 		spAlignment = serializedObject.FindProperty("m_FontData.m_Alignment");
 
 		pdFontData = new FontDataDrawer();
+
+		gsPreviewSymbol = new GUIStyle();
+		gsPreviewSymbol.alignment = TextAnchor.MiddleCenter;
+		gsPreviewSymbol.normal.textColor = EditorGUIUtility.isProSkin ? Color.white : Color.black;
 	}
 
 	public override void OnInspectorGUI()
@@ -48,11 +48,35 @@ public class MaterialSymbolEditor : UnityEditor.UI.TextEditor
 
 		EditorGUILayout.Space();
 
-		EditorGUILayout.PropertyField(spColor);
-		EditorGUILayout.PropertyField(spMaterial);
-		EditorGUILayout.PropertyField(spRaycastTarget);
+		base.AppearanceControlsGUI();
+		base.RaycastControlsGUI();
 
 		serializedObject.ApplyModifiedProperties();
+	}
+
+	public override bool HasPreviewGUI()
+	{
+		return true;
+	}
+
+	public override string GetInfoString()
+	{
+		return string.Format("Code: {0}", MaterialSymbol.ConvertCharToHex((target as MaterialSymbol).symbol.code));
+	}
+
+	public override void OnPreviewGUI(Rect drawArea, GUIStyle _)
+	{
+		int size = (int) Mathf.Min(drawArea.width, drawArea.height);
+
+		drawArea.x += (drawArea.width * 0.5f) - (size * 0.5f);
+		drawArea.y += (drawArea.height * 0.5f) - (size * 0.5f);
+		drawArea.width = drawArea.height = size;
+
+		gsPreviewSymbol.fontSize = size;
+		gsPreviewSymbol.font = (target as MaterialSymbol).font;
+
+		EditorGUI.DrawTextureTransparent(drawArea, null, ScaleMode.StretchToFill, 1f);
+		EditorGUI.LabelField(drawArea, (target as MaterialSymbol).symbol.code.ToString(), gsPreviewSymbol);
 	}
 
 	/// <summary> Reflection for the private synonymous method from the FontDataDrawer class. </summary>

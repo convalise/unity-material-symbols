@@ -371,6 +371,8 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		filteredCollection = codepointsCollection.Where(data => noFilter || data.label.IndexOf(filter) >= 0).ToArray();
 
 		keepActiveInView = true;
+		scrollPos.y = 0f;
+		base.Repaint();
 	}
 
 	private void SelectRelative(int delta)
