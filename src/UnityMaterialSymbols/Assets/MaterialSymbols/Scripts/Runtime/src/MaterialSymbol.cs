@@ -76,7 +76,7 @@ public class MaterialSymbol : Text
 
 		base.text = null;
 		base.font = null;
-		base.color = new Color(0.196f, 0.196f, 0.196f, 1.000f);
+		base.color = Color.white;
 		base.material = null;
 		base.alignment = TextAnchor.MiddleCenter;
 		base.supportRichText = false;

@@ -231,7 +231,10 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			menu.AddItem(styles.gcMenuAbout, false, OpenAbout);
 			menu.DropDown(rectSettingsButton);
 		}
-		EditorGUI.LabelField(rectSettingsButton, styles.gcLabelSettings, styles.gsToolbarLabel);
+
+		rectSettingsButton.xMin += Styles.optionsMenuLeftOffset;
+		rectSettingsButton.yMin += Styles.optionsMenuTopOffset;
+		EditorGUI.LabelField(rectSettingsButton, styles.gcLabelOptions, styles.gsToolbarOptions);
 	}
 
 	private void OnBodyGUI()
@@ -446,11 +449,19 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		public const int labelHeight = 26;
 		public const int spacing = 9;
 
+		#if UNITY_2019_3_OR_NEWER
+		public const int optionsMenuLeftOffset = 2;
+		public const int optionsMenuTopOffset = 2;
+		#else
+		public const int optionsMenuLeftOffset = 1;
+		public const int optionsMenuTopOffset = 5;
+		#endif
+
 		public static float verticalScrollbarFixedWidth { get { return GUI.skin.verticalScrollbar.fixedWidth; } }
 		public static float toolbarFixedHeight { get { return EditorStyles.toolbar.fixedHeight; } }
 
 		public GUIContent gcLabelFill { get; private set; }
-		public GUIContent gcLabelSettings { get; private set; }
+		public GUIContent gcLabelOptions { get; private set; }
 
 		public GUIContent gcMenuSort0 { get; private set; }
 		public GUIContent gcMenuSort1 { get; private set; }
@@ -466,15 +477,16 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		public GUIStyle gsToolbarSearchCancelButtonEmpty { get; private set; }
 		public GUIStyle gsToolbarSearchCancelButton { get; private set; }
 		public GUIStyle gsToolbarLabel { get; private set; }
+		public GUIStyle gsToolbarOptions { get; private set; }
 
 		public GUIStyle gsIconSelection { get; private set; }
-		public GUIStyle gsIconLabel { get; private set; }
 		public GUIStyle gsIconImage { get; private set; }
+		public GUIStyle gsIconLabel { get; private set; }
 
 		public Styles()
 		{
 			this.gcLabelFill = new GUIContent("Fill", "Switch between filled and standard styles.");
-			this.gcLabelSettings = new GUIContent(EditorGUIUtility.IconContent("Pane Options").image, "Options");
+			this.gcLabelOptions = new GUIContent(string.Empty, "Options");
 
 			this.gsToolbar = new GUIStyle("Toolbar");
 			this.gsToolbarButton = new GUIStyle("ToolbarButton");
@@ -502,7 +514,12 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			this.gsToolbarLabel.padding = new RectOffset(0, 0, 0, 0);
 			this.gsToolbarLabel.margin = new RectOffset(0, 0, 0, 0);
 
-			this.gsIconSelection = new GUIStyle("RL Element");
+			this.gsToolbarOptions = new GUIStyle("PaneOptions");
+
+			this.gsIconSelection = new GUIStyle("PR Label");
+			this.gsIconSelection.fixedHeight = 0;
+			this.gsIconSelection.padding = new RectOffset(0, 0, 0, 0);
+			this.gsIconSelection.margin = new RectOffset(0, 0, 0, 0);
 
 			this.gsIconLabel = new GUIStyle("ControlLabel");
 			this.gsIconLabel.fontSize = 10;
@@ -518,7 +535,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			this.gsIconImage.padding = new RectOffset(0, 0, 0, 0);
 			this.gsIconImage.margin = new RectOffset(0, 0, 0, 0);
 
-			#if !UNITY_2019_1_OR_NEWER
+			#if !UNITY_2019_3_OR_NEWER
 			this.gsIconLabel.onFocused.textColor = Color.white;
 			this.gsIconImage.onFocused.textColor = Color.white;
 			#endif

@@ -67,7 +67,6 @@ public class MaterialSymbolDataDrawer : PropertyDrawer
 
 		public GUIContent gcSymbol { get; private set; }
 		public GUIContent gcMixedValues { get; private set; }
-		public GUIContent gcInvalidType { get; private set; }
 		public GUIContent gcFontError { get; private set; }
 
 		public GUIStyle gsSymbol { get; private set; }
@@ -79,12 +78,12 @@ public class MaterialSymbolDataDrawer : PropertyDrawer
 
 			this.gcSymbol = new GUIContent();
 			this.gcMixedValues = new GUIContent("\u2014", "Mixed Values");
-			this.gcInvalidType = new GUIContent("The attribute must be used with string type only.");
 			this.gcFontError = new GUIContent("Could not find fonts reference.", EditorGUIUtility.IconContent("console.erroricon").image);
 
 			this.gsSymbol = new GUIStyle("ControlLabel");
-			this.gsSymbol.alignment = TextAnchor.MiddleCenter;
+			this.gsSymbol.font = null;
 			this.gsSymbol.fontSize = 42;
+			this.gsSymbol.alignment = TextAnchor.MiddleCenter;
 
 			this.gsMixedValues = new GUIStyle("Label");
 			this.gsMixedValues.alignment = TextAnchor.MiddleCenter;

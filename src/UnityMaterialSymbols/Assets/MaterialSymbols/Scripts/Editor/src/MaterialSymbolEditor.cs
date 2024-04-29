@@ -61,11 +61,13 @@ public class MaterialSymbolEditor : UnityEditor.UI.TextEditor
 
 	public override string GetInfoString()
 	{
-		return string.Format("Code: {0}", MaterialSymbol.ConvertCharToHex((target as MaterialSymbol).symbol.code));
+		MaterialSymbol targetMS = target as MaterialSymbol;
+		return string.Format("Code: {0}", MaterialSymbol.ConvertCharToHex(targetMS.symbol.code));
 	}
 
 	public override void OnPreviewGUI(Rect drawArea, GUIStyle _)
 	{
+		MaterialSymbol targetMS = target as MaterialSymbol;
 		int size = (int) Mathf.Min(drawArea.width, drawArea.height);
 
 		drawArea.x += (drawArea.width * 0.5f) - (size * 0.5f);
@@ -73,29 +75,28 @@ public class MaterialSymbolEditor : UnityEditor.UI.TextEditor
 		drawArea.width = drawArea.height = size;
 
 		gsPreviewSymbol.fontSize = size;
-		gsPreviewSymbol.font = (target as MaterialSymbol).font;
+		gsPreviewSymbol.font = targetMS.font;
 
 		EditorGUI.DrawTextureTransparent(drawArea, null, ScaleMode.StretchToFill, 1f);
-		EditorGUI.LabelField(drawArea, (target as MaterialSymbol).symbol.code.ToString(), gsPreviewSymbol);
+		EditorGUI.LabelField(drawArea, targetMS.symbol.code.ToString(), gsPreviewSymbol);
 	}
 
 	/// <summary> Reflection for the private synonymous method from the FontDataDrawer class. </summary>
 	private static void DoTextAlignmentControl(FontDataDrawer propertyDrawer, SerializedProperty property)
 	{
+		Rect position = GUILayoutUtility.GetRect(0f, EditorGUIUtility.singleLineHeight, GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(false));
 		try
 		{
-			MethodInfo miDoTextAlignmentControl = typeof(FontDataDrawer).GetMethod("DoTextAligmentControl", BindingFlags.NonPublic | BindingFlags.Instance);
-			if(miDoTextAlignmentControl != null)
-			{
-				Rect position = GUILayoutUtility.GetRect(0f, EditorGUIUtility.singleLineHeight, GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(false));
-				miDoTextAlignmentControl.Invoke(propertyDrawer, new object[] { position, property });
-			}
+			if(miDoTextAlignmentControl == null)
+				miDoTextAlignmentControl = typeof(FontDataDrawer).GetMethod("DoTextAligmentControl", BindingFlags.NonPublic | BindingFlags.Instance);
+			miDoTextAlignmentControl.Invoke(propertyDrawer, new object[] { position, property });
 		}
-		catch(System.Exception e)
+		catch(System.Exception)
 		{
-			Debug.LogException(e);
+			EditorGUI.PropertyField(position, property);
 		}
 	}
+	private static MethodInfo miDoTextAlignmentControl;
 }
 
 }
