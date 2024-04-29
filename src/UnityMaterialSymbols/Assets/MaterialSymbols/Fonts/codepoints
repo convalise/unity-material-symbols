@@ -1773,6 +1773,7 @@ upload_2 f521
 download_2 f523
 shift_lock f7ae
 shift e5f2
+shift_lock_off f483
 grading ea4f
 format_align_justify e235
 format_align_center e234
