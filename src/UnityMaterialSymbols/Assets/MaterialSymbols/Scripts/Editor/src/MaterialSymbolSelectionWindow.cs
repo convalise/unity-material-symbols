@@ -1,4 +1,4 @@
-﻿
+
 using UnityEngine;
 using UnityEditor;
 
@@ -264,7 +264,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		scrollPos = GUI.BeginScrollView(scrollRect, scrollPos, viewRect);
 
 		CodepointData data;
-		bool hover, active, focus;
+		bool visible ,hover ,active, focus;
 
 		focus = string.IsNullOrEmpty(GUI.GetNameOfFocusedControl());
 
@@ -281,21 +281,24 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			buttonRect.x = iconRect.x - (Styles.spacing * 0.5f);
 			buttonRect.y = iconRect.y - (Styles.spacing * 0.5f);
 
-			hover = buttonRect.Contains(Event.current.mousePosition);
 			active = (data == selected);
+			visible = (buttonRect.yMax > scrollPos.y) && (buttonRect.yMin < scrollPos.y + scrollRect.height);
 
 			if(active && keepActiveInView)
 			{
-				if(allowKeepActiveInView)
-				{
-					if(buttonRect.y + buttonRect.height > scrollPos.y + scrollRect.height)
-						scrollPos.y = buttonRect.y + buttonRect.height - scrollRect.height;
-					else if(buttonRect.y < scrollPos.y)
-						scrollPos.y = buttonRect.y;
-				}
+				if(buttonRect.yMax > scrollPos.y + scrollRect.height)
+					scrollPos.y = buttonRect.yMax - scrollRect.height;
+				else if(buttonRect.yMin < scrollPos.y)
+					scrollPos.y = buttonRect.yMin;
+
 				keepActiveInView = false;
 				base.Repaint();
 			}
+
+			if(!visible)
+				continue;
+
+			hover = buttonRect.Contains(Event.current.mousePosition);
 
 			if(Event.current.type == EventType.Repaint)
 			{
@@ -328,7 +331,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 	private void ToggleShowNames()
 	{
 		EditorPrefs.SetBool(showNamesEPK, showNames = !showNames);
-		keepActiveInView = true;
+		keepActiveInView = allowKeepActiveInView;
 	}
 
 	private void ToggleFocusSearch()
@@ -373,7 +376,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 		filteredCollection = codepointsCollection.Where(data => noFilter || data.label.IndexOf(filter) >= 0).ToArray();
 
-		keepActiveInView = true;
+		keepActiveInView = allowKeepActiveInView;
 		scrollPos.y = 0f;
 		base.Repaint();
 	}
