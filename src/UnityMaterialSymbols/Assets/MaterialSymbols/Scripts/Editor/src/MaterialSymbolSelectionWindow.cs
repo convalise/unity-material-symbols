@@ -19,6 +19,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 	private Vector2 scrollPos = Vector2.zero;
 	private string searchText = string.Empty;
+	private int undoGroup;
 
 	private bool showNames = true;
 	private bool allowFocusSearchField = true;
@@ -76,6 +77,8 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 	{
 		base.titleContent = new GUIContent("Material Symbol Selection");
 		base.minSize = new Vector2((Styles.iconSize + Styles.labelHeight + Styles.spacing) * 5f + Styles.verticalScrollbarFixedWidth + 1f, (Styles.iconSize + Styles.labelHeight + Styles.spacing) * 6f + Styles.toolbarFixedHeight);
+
+		undoGroup = Undo.GetCurrentGroup();
 	}
 
 	private void OnDisable()
@@ -84,6 +87,9 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		filteredCollection = null;
 		fontRef = null;
 		System.GC.Collect();
+
+		Undo.SetCurrentGroupName(Regex.Replace(Undo.GetCurrentGroupName(), "\\.code|\\.fill", string.Empty));
+		Undo.CollapseUndoOperations(undoGroup);
 	}
 
 	private void OnGUI()
@@ -168,10 +174,10 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 				}
 			}
 
-			if((Event.current.keyCode >= KeyCode.A) && (Event.current.keyCode <= KeyCode.Z) || (Event.current.keyCode >= KeyCode.Alpha0) && (Event.current.keyCode <= KeyCode.Alpha9) || (Event.current.keyCode >= KeyCode.Keypad0) && (Event.current.keyCode <= KeyCode.Keypad9))
+			if(Event.current.keyCode == KeyCode.Escape)
 			{
-				focusSearchField = true;
-				Event.current.Use();
+				Undo.RevertAllDownToGroup(undoGroup);
+				// Event.current.Use();
 			}
 		}
 	}
