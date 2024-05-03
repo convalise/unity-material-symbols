@@ -1,9 +1,11 @@
-
+﻿
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.IMGUI.Controls;
 
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace com.convalise.UnityMaterialSymbols
 {
@@ -17,13 +19,15 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 	private CodepointData selected;
 	private System.Action<char, bool> OnSelectionChanged;
 
+	private SearchField searchField;
+	private string searchString = string.Empty;
 	private Vector2 scrollPos = Vector2.zero;
-	private string searchText = string.Empty;
 	private int undoGroup;
 
 	private bool showNames = true;
 	private bool allowFocusSearchField = true;
 	private bool allowKeepActiveInView = true;
+	private bool enableRegexSearch = false;
 	private int sortId = 1;
 
 	private bool fill = false;
@@ -38,8 +42,8 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 	private readonly string showNamesEPK = typeof(MaterialSymbolSelectionWindow) + ".showNames";
 	private readonly string focusSearchFieldEPK = typeof(MaterialSymbolSelectionWindow) + ".focusSearchField";
 	private readonly string keepActiveInViewEPK = typeof(MaterialSymbolSelectionWindow) + ".keepActiveInView";
+	private readonly string enableRegexSearchEPK = typeof(MaterialSymbolSelectionWindow) + ".enableRegexSearch";
 	private readonly string sortIdEPK = typeof(MaterialSymbolSelectionWindow) + ".sortId";
-	private readonly string searchTextControlName = "search-text";
 
 	public static void Init(char preSelected, bool preFilled, System.Action<char, bool> onSelectionChanged)
 	{
@@ -51,6 +55,9 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 	private void LoadDependencies(char preSelected, bool preFilled, System.Action<char, bool> onSelectionChanged)
 	{
+		searchField = new SearchField();
+		searchField.downOrUpArrowKeyPressed += () => SelectRelative(0);
+
 		fontRef = MaterialSymbol.LoadFontRef();
 
 		if((fontRef == null) || string.IsNullOrEmpty(fontRef.GetCodepointsEditorPath()))
@@ -59,6 +66,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		showNames = EditorPrefs.GetBool(showNamesEPK, showNames);
 		allowFocusSearchField = EditorPrefs.GetBool(focusSearchFieldEPK, allowFocusSearchField);
 		allowKeepActiveInView = EditorPrefs.GetBool(keepActiveInViewEPK, allowKeepActiveInView);
+		enableRegexSearch = EditorPrefs.GetBool(enableRegexSearchEPK, enableRegexSearch);
 		sortId = EditorPrefs.GetInt(sortIdEPK, sortId);
 
 		focusSearchField = allowFocusSearchField;
@@ -167,9 +175,10 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 			if((Event.current.keyCode == KeyCode.Return) || (Event.current.keyCode == KeyCode.KeypadEnter))
 			{
-				if(string.IsNullOrEmpty(GUI.GetNameOfFocusedControl()))
+				if(!searchField.HasFocus())
 				{
 					EditorApplication.delayCall += base.Close;
+					GUIUtility.ExitGUI();
 					Event.current.Use();
 				}
 			}
@@ -186,29 +195,20 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 	{
 		EditorGUILayout.BeginHorizontal(styles.gsToolbar);
 		Rect rectSearchField = GUILayoutUtility.GetRect(GUIContent.none, styles.gsToolbarSearchField, GUILayout.ExpandWidth(true));
-		Rect rectSearchClearButton = GUILayoutUtility.GetRect(GUIContent.none, styles.gsToolbarSearchCancelButtonEmpty, GUILayout.ExpandWidth(false));
 		Rect rectFillButton = GUILayoutUtility.GetRect(styles.gcLabelFill, styles.gsToolbarButton, GUILayout.Width(64f));
 		Rect rectSettingsButton = GUILayoutUtility.GetRect(Styles.toolbarFixedHeight, Styles.toolbarFixedHeight, GUILayout.ExpandWidth(false));
 		EditorGUILayout.EndHorizontal();
 
 		EditorGUI.BeginChangeCheck();
-		GUI.SetNextControlName(searchTextControlName);
-		searchText = EditorGUI.TextField(rectSearchField, searchText, styles.gsToolbarSearchField);
+		searchString = searchField.OnToolbarGUI(rectSearchField, searchString);
 		if(EditorGUI.EndChangeCheck())
 		{
 			RunFilter();
 		}
 
-		if(GUI.Button(rectSearchClearButton, GUIContent.none, string.IsNullOrEmpty(searchText) ? styles.gsToolbarSearchCancelButtonEmpty : styles.gsToolbarSearchCancelButton) && !string.IsNullOrEmpty(searchText))
-		{
-			searchText = string.Empty;
-			GUI.FocusControl(null);
-			RunFilter();
-		}
-
 		if(focusSearchField)
 		{
-			EditorGUI.FocusTextInControl(searchTextControlName);
+			searchField.SetFocus();
 			focusSearchField = false;
 		}
 
@@ -224,15 +224,16 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 		if(GUI.Button(rectSettingsButton, GUIContent.none, styles.gsToolbarButton))
 		{
-			GUI.FocusControl(null);
+			GUIUtility.keyboardControl = 0;
 			GenericMenu menu = new GenericMenu();
 			menu.AddItem(styles.gcMenuSort0, sortId == 0, ChangeSort, 0);
 			menu.AddItem(styles.gcMenuSort1, sortId == 1, ChangeSort, 1);
 			menu.AddItem(styles.gcMenuSort2, sortId == 2, ChangeSort, 2);
 			menu.AddSeparator(string.Empty);
 			menu.AddItem(styles.gcMenuShowNames, showNames, ToggleShowNames);
-			menu.AddItem(styles.gcMenuFocusSearch, allowFocusSearchField, ToggleFocusSearch);
 			menu.AddItem(styles.gcMenuKeepView, allowKeepActiveInView, ToggleKeepView);
+			menu.AddItem(styles.gcMenuFocusSearch, allowFocusSearchField, ToggleFocusSearch);
+			menu.AddItem(styles.gcMenuEnableRegex, enableRegexSearch, ToggleRegexSearch);
 			menu.AddSeparator(string.Empty);
 			menu.AddItem(styles.gcMenuAbout, false, OpenAbout);
 			menu.DropDown(rectSettingsButton);
@@ -272,7 +273,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		CodepointData data;
 		bool visible ,hover ,active, focus;
 
-		focus = string.IsNullOrEmpty(GUI.GetNameOfFocusedControl());
+		focus = !searchField.HasFocus();
 
 		for(int i = 0; i < filteredCollection.Length; i++)
 		{
@@ -325,7 +326,10 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			{
 				Select(data);
 				if(Event.current.clickCount == 2)
+				{
 					EditorApplication.delayCall += base.Close;
+					GUIUtility.ExitGUI();
+				}
 				Event.current.Use();
 			}
 		}
@@ -343,6 +347,12 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 	private void ToggleFocusSearch()
 	{
 		EditorPrefs.SetBool(focusSearchFieldEPK, allowFocusSearchField = !allowFocusSearchField);
+	}
+
+	private void ToggleRegexSearch()
+	{
+		EditorPrefs.SetBool(enableRegexSearchEPK, enableRegexSearch = !enableRegexSearch);
+		RunFilter();
 	}
 
 	private void ToggleKeepView()
@@ -377,21 +387,42 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 	private void RunFilter()
 	{
-		bool noFilter = string.IsNullOrEmpty(searchText);
-		string filter = noFilter ? string.Empty : searchText.ToLowerInvariant();
-
-		filteredCollection = codepointsCollection.Where(data => noFilter || data.label.IndexOf(filter) >= 0).ToArray();
+		if(string.IsNullOrEmpty(searchString))
+		{
+			filteredCollection = codepointsCollection;
+		}
+		else
+		{
+			filteredCollection = codepointsCollection.Where(DoesItemMatchFilter).ToArray();
+		}
 
 		keepActiveInView = allowKeepActiveInView;
 		scrollPos.y = 0f;
 		base.Repaint();
 	}
 
+	private bool DoesItemMatchFilter(CodepointData data)
+	{
+		if(enableRegexSearch)
+		{
+			try
+			{
+				return Regex.IsMatch(data.label, searchString, RegexOptions.IgnoreCase);
+			}
+			catch
+			{
+				return false;
+			}
+		}
+
+		return data.label.IndexOf(searchString, System.StringComparison.OrdinalIgnoreCase) >= 0;
+	}
+
 	private void SelectRelative(int delta)
 	{
-		if(GUI.GetNameOfFocusedControl() == searchTextControlName)
+		if(searchField.HasFocus())
 		{
-			GUI.FocusControl(null);
+			GUIUtility.keyboardControl = 0;
 			delta = 0;
 		}
 		SelectAbsolute(System.Array.IndexOf(filteredCollection, selected) + delta);
@@ -405,7 +436,7 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 
 	private void Select(CodepointData data, bool keep = true)
 	{
-		GUI.FocusControl(null);
+		GUIUtility.keyboardControl = 0;
 		selected = data;
 		OnSelectionChanged.Invoke(data.code, fill);
 		keepActiveInView = keep;
@@ -477,14 +508,13 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		public GUIContent gcMenuSort2 { get; private set; }
 		public GUIContent gcMenuShowNames { get; private set; }
 		public GUIContent gcMenuFocusSearch { get; private set; }
+		public GUIContent gcMenuEnableRegex { get; private set; }
 		public GUIContent gcMenuKeepView { get; private set; }
 		public GUIContent gcMenuAbout { get; private set; }
 
 		public GUIStyle gsToolbar { get; private set; }
 		public GUIStyle gsToolbarButton { get; private set; }
 		public GUIStyle gsToolbarSearchField { get; private set; }
-		public GUIStyle gsToolbarSearchCancelButtonEmpty { get; private set; }
-		public GUIStyle gsToolbarSearchCancelButton { get; private set; }
 		public GUIStyle gsToolbarLabel { get; private set; }
 		public GUIStyle gsToolbarOptions { get; private set; }
 
@@ -500,23 +530,16 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			this.gsToolbar = new GUIStyle("Toolbar");
 			this.gsToolbarButton = new GUIStyle("ToolbarButton");
 
-			this.gcMenuSort0 = new GUIContent("Sort by font index");
-			this.gcMenuSort1 = new GUIContent("Sort by name");
-			this.gcMenuSort2 = new GUIContent("Sort by code");
-			this.gcMenuShowNames = new GUIContent("Show icon name");
-			this.gcMenuFocusSearch = new GUIContent("Focus search field on open");
-			this.gcMenuKeepView = new GUIContent("Keep icon selection in view");
+			this.gcMenuSort0 = new GUIContent("Sort by Font Index");
+			this.gcMenuSort1 = new GUIContent("Sort by Name");
+			this.gcMenuSort2 = new GUIContent("Sort by Code");
+			this.gcMenuShowNames = new GUIContent("Show Labels");
+			this.gcMenuFocusSearch = new GUIContent("Focus Search Field on Open");
+			this.gcMenuEnableRegex = new GUIContent("Search Using Regular Expression");
+			this.gcMenuKeepView = new GUIContent("Keep Selection in View");
 			this.gcMenuAbout = new GUIContent("About...");
 
-			#if UNITY_2023_1_OR_NEWER
-			this.gsToolbarSearchField = new GUIStyle("ToolbarSearchTextField");
-			this.gsToolbarSearchCancelButtonEmpty = new GUIStyle("ToolbarSearchCancelButtonEmpty");
-			this.gsToolbarSearchCancelButton = new GUIStyle("ToolbarSearchCancelButton");
-			#else
-			this.gsToolbarSearchField = new GUIStyle("ToolbarSeachTextField");
-			this.gsToolbarSearchCancelButtonEmpty = new GUIStyle("ToolbarSeachCancelButtonEmpty");
-			this.gsToolbarSearchCancelButton = new GUIStyle("ToolbarSeachCancelButton");
-			#endif
+			this.gsToolbarSearchField = new GUIStyle("TextField");
 
 			this.gsToolbarLabel = new GUIStyle("ControlLabel");
 			this.gsToolbarLabel.alignment = TextAnchor.MiddleCenter;
