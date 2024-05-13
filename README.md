@@ -89,7 +89,7 @@ Yes, but at your own risk. You're free to download and use any variation you lik
 
 #### 5.1) Alternative
 
-In order to minimize bad decisions, I've made a list of font variations available for download on [this page](URLs.md). They have a compact file size and the included codepoints file is already compatible with them.
+In order to minimize bad decisions, I've made a list of font variations available for download on [this page](URLs.md). They have a (more) compact file size than other sources and the included codepoints file is already compatible with them.
 
 #### 5.2) Disclaimer
 
@@ -97,11 +97,24 @@ While I'm reluctant to include variations in the package as previously explained
 
 ### 6) Can I use the package with TextMeshPro?
 
-Well, I personally see no advantages in using TMP because it adds a lot of unnecessary overhead to get the same result, but technically speaking, yes you can. You'll need to create the `TMP_FontAsset` using the official methods and manually set the unicode-escaped string to the `TMP_Text` though.
+Well, I personally see no advantages in using TMP because it adds a lot of unnecessary overhead to get the same result, but technically speaking, yes you can. You'll need to create the `TMP_FontAsset` using the official methods and manually set the unicode-escaped string to the `TMP_Text` though. For that last part, you can do something like this:
+
+```cs
+public MaterialSymbolData icon;
+public TMP_Text tmp_text;
+
+public void OnValidate()
+{
+    if(tmp_text != null)
+        tmp_text.text = icon.code.ToString();
+
+    // Assuming the TMP_Text already has the TMP_FontAsset properly linked.
+}
+```
 
 ### 7) I liked your work, can I buy you a coffee?
 
-Thank you, I'd love that! You can warm my heart on this [Ko-fi link](https://ko-fi.com/convalise/?hidefeed=true&widget=true&embed=true&preview=true), or this [PayPal link](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YAUUBSC3KYUEC&source=url). I'm also available on [GitHub Sponsors](https://github.com/sponsors/convalise).
+Thank you, I'd love that! You can use this link: [Ko-fi](https://ko-fi.com/convalise/?hidefeed=true&widget=true&embed=true&preview=true) / [GitHub Sponsors](https://github.com/sponsors/convalise).
 
 ## Credits
 
