@@ -879,6 +879,8 @@ settings_system_daydream e1c3
 manga f5e3
 transition_chop f50e
 text_ad e728
+contextual_token f486
+contextual_token_add f485
 pip_exit f70d
 pip f64d
 pin_end e767
