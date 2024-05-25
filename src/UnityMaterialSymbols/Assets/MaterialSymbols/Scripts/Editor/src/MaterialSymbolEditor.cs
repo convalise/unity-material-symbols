@@ -50,6 +50,9 @@ public class MaterialSymbolEditor : UnityEditor.UI.TextEditor
 
 		base.AppearanceControlsGUI();
 		base.RaycastControlsGUI();
+		#if UNITY_2019_4_OR_NEWER
+		base.MaskableControlsGUI();
+		#endif
 
 		serializedObject.ApplyModifiedProperties();
 	}
