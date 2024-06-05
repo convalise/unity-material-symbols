@@ -751,6 +751,7 @@ ad_group_off eae5
 tab_group f743
 move_group f715
 tab_duplicate f744
+tab_inactive f43b
 finance e6bf
 ungroup f731
 content_copy e14d
@@ -1116,6 +1117,9 @@ hallway e6f8
 image_search e43f
 wallpaper e1bc
 reset_image f824
+replace_audio f451
+replace_image f450
+replace_video f44f
 settings_cell e8bc
 p2p f52a
 app_blocking ef3f
@@ -1162,6 +1166,7 @@ phonelink_ring_off f7aa
 stream_apps f79f
 tap_and_play e62b
 devices_wearables f6ab
+smartphone_camera f44e
 dual_screen f6cf
 rear_camera f6c2
 camera_front e3b1
@@ -1175,6 +1180,7 @@ tablet_mac e331
 tablet e32f
 screenshot_tablet f697
 aod_tablet f89f
+tablet_camera f44d
 on_device_training ebfd
 devices e1b1
 devices e326
@@ -1332,6 +1338,9 @@ phone_in_talk e61d
 wifi_calling_1 f085
 wifi_calling_1 f0e7
 wifi_calling_2 f0f6
+wifi_calling_bar_1 f44c
+wifi_calling_bar_2 f44b
+wifi_calling_bar_3 f44a
 wifi_calling ef77
 phone_bluetooth_speaker e61b
 phone_forwarded e61c
