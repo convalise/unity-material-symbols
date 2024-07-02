@@ -39,9 +39,15 @@ view_carousel e8eb
 amp_stories ea13
 view_day e8ed
 calendar_view_day e936
+view_object_track f432
 view_headline e8ee
 view_column e8ec
 view_stream e8f2
+add_row_above f423
+add_row_below f422
+add_column_left f425
+add_column_right f424
+combine_columns f420
 view_list e8ef
 view_module e8f0
 view_quilt e8f1
@@ -812,6 +818,7 @@ add_card eb86
 credit_score eff1
 credit_card_heart f52c
 credit_card_gear f52d
+credit_card_clock f438
 credit_card_off e4f4
 card_travel e8f8
 card_membership e8f7
@@ -827,6 +834,7 @@ picture_in_picture_center f550
 desktop_portrait f45d
 float_portrait_2 f45b
 desktop_landscape f45e
+desktop_landscape_add f439
 float_landscape_2 f45c
 fullscreen_portrait f45a
 splitscreen_portrait f458
@@ -1315,6 +1323,10 @@ verified_user e8e8
 verified_user f013
 gpp_maybe f014
 encrypted e593
+encrypted_off f427
+encrypted_add f429
+encrypted_add_circle f42a
+encrypted_minus_circle f428
 shield_locked f592
 health_and_safety e1d5
 remove_moderator e9d4
@@ -1484,6 +1496,7 @@ rebase f845
 auto_transmission f53f
 graphic_eq e1b8
 cadence f4b4
+edit_audio f42d
 sliders e9e3
 switches e733
 toggle_off e9f5
@@ -1508,6 +1521,8 @@ hdr_strong e3f1
 hdr_weak e3f2
 linked_services f535
 action_key f502
+orbit f426
+automation f421
 atr ebc7
 workspaces e1a0
 workspaces ea0f
@@ -1792,6 +1807,7 @@ highlighter_size_2 f76a
 highlighter_size_1 f76b
 line_start f825
 line_end f826
+diagonal_line f41e
 line_start_square f814
 line_start_diamond f815
 line_start_circle f816
@@ -2097,6 +2113,7 @@ glyphs f8a3
 emoji_symbols ea1e
 widgets e1bd
 category e574
+category_search f437
 interests e7c8
 play_shapes f7fc
 store e563
@@ -2772,6 +2789,7 @@ layers_clear e53c
 stacks f500
 all_inclusive eb3d
 masked_transitions e72e
+masked_transitions_add f42b
 animation e71c
 join eaeb
 join f84f
@@ -3058,6 +3076,7 @@ settings_input_component e8c0
 settings_input_component e8c1
 eject e8fb
 play_arrow e037
+arrow_back_2 f43a
 resume f7d0
 skip_next e044
 skip_previous e045
@@ -3596,6 +3615,7 @@ g_translate e927
 nest_protect e68e
 nest_thermostat e68f
 add_to_drive e65c
+drive_export f41d
 crowdsource eb18
 translate e8e2
 streetview e56e
