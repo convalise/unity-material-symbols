@@ -361,6 +361,7 @@ autorenew e028
 autorenew e863
 sync e627
 cloud_sync eb5a
+sync_desktop f41a
 sync_lock eaee
 rule_settings f64c
 sync_problem e629
@@ -373,6 +374,7 @@ rotate_90_degrees_ccw e418
 model_training f0cf
 whatshot e80e
 lock_reset eade
+rotate_auto f417
 restart_alt f053
 directory_sync e394
 noise_control_on f8a8
@@ -568,6 +570,7 @@ demography e489
 export_notes e0ac
 source_notes e12d
 article_shortcut f587
+convert_to_text f41f
 list_alt e0ee
 list_alt_add f756
 clinical_notes e09e
@@ -668,6 +671,7 @@ tv_guide e1dc
 post e705
 photo_prints efb2
 animated_images f49a
+stack_hexagon f41c
 photo_auto_merge f530
 note_stack_add f563
 note_stack f562
@@ -3032,6 +3036,7 @@ hearing e023
 hearing_aid f464
 hearing_disabled f104
 voice_selection f58a
+voice_selection_off f42c
 audio_description f58c
 flare e3e4
 point_scan f70c
@@ -3069,6 +3074,7 @@ family_star f527
 settings_power e8c6
 power_settings_new e8ac
 power_settings_new f8c7
+power_settings_circle f418
 mode_off_on f16f
 settings_input_svideo e8c3
 settings_input_hdmi e8c2
@@ -3458,6 +3464,7 @@ soap f1b2
 sign_language ebe5
 lift_to_talk efa3
 gesture_select f657
+multimodal_hand_eye f41b
 back_hand e764
 front_hand e769
 eda f6e8
