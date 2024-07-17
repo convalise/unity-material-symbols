@@ -1967,6 +1967,7 @@ exposure_plus_1 e800
 exposure_neg_2 e3cc
 exposure_plus_2 e3ce
 format_quote e244
+format_quote_off f413
 font_download e167
 font_download_off e4f9
 serif f4ac
@@ -3074,8 +3075,8 @@ family_star f527
 settings_power e8c6
 power_settings_new e8ac
 power_settings_new f8c7
-power_settings_circle f418
 mode_off_on f16f
+power_settings_circle f418
 settings_input_svideo e8c3
 settings_input_hdmi e8c2
 settings_input_component e8c0
@@ -3264,6 +3265,7 @@ rewarded_ads efb6
 ar_stickers e983
 api f1b7
 database f20e
+database_off f414
 stat_0 e697
 filter_retrolux e3e1
 newsstand e9c4
