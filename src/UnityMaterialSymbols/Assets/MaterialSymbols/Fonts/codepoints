@@ -334,6 +334,8 @@ replay_circle_filled e9d8
 screen_record f679
 filter_tilt_shift e3e2
 downloading f001
+arrow_upload_ready f3f5
+arrow_upload_progress f3f4
 crop_rotate e437
 cameraswitch efeb
 3d_rotation e84d
@@ -692,6 +694,7 @@ newspaper eb81
 receipt e8b0
 receipt_long ef6e
 contract f5a0
+receipt_long_off f40a
 contract_edit f5a1
 contract_delete f5a2
 order_play f811
@@ -1063,6 +1066,8 @@ mouse_lock_off f48f
 touchpad_mouse f687
 touchpad_mouse_off f4e6
 trackpad_input f4c7
+trackpad_input_2 f409
+trackpad_input_3 f408
 joystick f5ee
 sports_esports ea28
 stadia_controller f135
@@ -1338,6 +1343,7 @@ health_and_safety e1d5
 remove_moderator e9d4
 safety_check_off f59d
 policy ea17
+policy_alert f407
 security e32a
 shield_with_house e78d
 shield_person f650
@@ -1811,6 +1817,11 @@ highlighter_size_4 f768
 highlighter_size_3 f769
 highlighter_size_2 f76a
 highlighter_size_1 f76b
+eraser_size_1 f3fc
+eraser_size_2 f3fb
+eraser_size_3 f3fa
+eraser_size_4 f3f9
+eraser_size_5 f3f8
 line_start f825
 line_end f826
 diagonal_line f41e
