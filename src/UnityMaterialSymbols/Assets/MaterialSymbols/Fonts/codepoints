@@ -888,6 +888,7 @@ surround_sound e049
 confirmation_number e638
 local_activity e53f
 local_activity e553
+transit_ticket f3f1
 airplane_ticket efd9
 upcoming f07e
 subscriptions e064
@@ -1557,6 +1558,7 @@ border_vertical e233
 border_horizontal e22c
 border_inner e22d
 devices_fold ebde
+devices_fold_2 f406
 select f74d
 select_all e162
 deselect ebb6
@@ -2077,6 +2079,7 @@ h_plus_mobiledata_badge f7df
 g_mobiledata_badge f7e1
 ev_mobiledata_badge f7e2
 e_mobiledata_badge f7e3
+24fps_select f3f2
 30fps_select efcf
 60fps_select efd5
 autofps_select efdc
@@ -3476,6 +3479,7 @@ reminder e695
 reminder e6c6
 pan_tool e925
 hand_gesture ef9c
+hand_gesture_off f3f3
 do_not_touch f1b0
 wrist f69c
 dry f1b3
@@ -3500,6 +3504,12 @@ folded_hands f5ed
 podiatry e120
 do_not_step f19f
 steps f6da
+face_up f3fd
+face_down f402
+face_left f401
+face_right f3ff
+face_nod f400
+face_shake f3fe
 face e87c
 face f008
 face_retouching_natural ef4e
