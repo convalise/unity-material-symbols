@@ -67,6 +67,7 @@ border_all e228
 view_comfy e42a
 view_compact e42b
 dashboard e871
+dashboard_2 f3ea
 dashboard_customize e99b
 grid_view e9b0
 view_comfy_alt eb73
@@ -1029,6 +1030,7 @@ assistant e39f
 live_help e0c6
 nest_found_savings f8c0
 tooltip e9f8
+tooltip_2 f3ed
 filter_frames e3de
 business_messages ef84
 subtitles e048
@@ -1116,7 +1118,9 @@ dvr e1b2
 add_to_queue e05c
 tv_signin e71b
 screenshot_monitor ec08
+tv_next f3eb
 queue_play_next e066
+tv_displays f3ec
 install_desktop eb71
 reset_tv e9d9
 developer_mode_tv e874
@@ -1188,6 +1192,7 @@ devices_wearables f6ab
 smartphone_camera f44e
 dual_screen f6cf
 rear_camera f6c2
+pixel_9_pro_fold f3f0
 camera_front e3b1
 camera_rear e3b2
 stay_current_landscape e0d3
@@ -2636,6 +2641,7 @@ bolt ea0b
 electric_bolt ec1c
 lightning_stand efa4
 wallet f8ff
+money_bag f3ee
 savings e2eb
 money e57d
 universal_currency e9fa
@@ -3662,3 +3668,4 @@ flutter f1dd
 google_wifi e840
 google_wifi f579
 brand_family f4f1
+reg_logo_ift f3ef
