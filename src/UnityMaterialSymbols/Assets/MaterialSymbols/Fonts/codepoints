@@ -321,6 +321,7 @@ update e923
 update_disabled e075
 more_time ea5d
 av_timer e01b
+history_2 f3e6
 alarm e190
 alarm e191
 alarm e855
@@ -385,6 +386,7 @@ noise_control_on f8a8
 noise_aware ebec
 noise_control_off ebf3
 avg_pace f6bb
+search_activity f3e5
 camera e3af
 shutter_speed e43d
 shutter_speed_minus f57d
@@ -540,6 +542,7 @@ ods e6e8
 odt e6e9
 tsv e6d6
 csv e6cf
+upi_pay f3cf
 av1 f4b0
 avc f4af
 markdown f552
@@ -577,6 +580,7 @@ article_shortcut f587
 convert_to_text f41f
 list_alt e0ee
 list_alt_add f756
+list_alt_check f3de
 clinical_notes e09e
 add_box e146
 tab_new_right f741
@@ -761,12 +765,14 @@ library_add e02e
 library_add e03c
 add_to_photos e39d
 tab_close f745
+file_map_stack f3e2
 ad_group e65b
 ad_group_off eae5
 tab_group f743
 move_group f715
 tab_duplicate f744
 tab_inactive f43b
+tab_close_inactive f3d0
 finance e6bf
 ungroup f731
 content_copy e14d
@@ -946,12 +952,16 @@ topic f1c8
 rule_folder f1c9
 snippet_folder f1c7
 folder_limited f4e4
+folder_check f3d7
 folder_copy ebbd
 folder_data f586
+folder_eye f3d5
+folder_check_2 f3d6
 perm_media e8a7
 folder_supervised f774
 folder_managed f775
 bookmark_manager f7b1
+folder_match f3d4
 markunread_mailbox e89b
 mark_as_unread e9bc
 stacked_email e6c7
@@ -1090,6 +1100,7 @@ tv_with_assistant e785
 jamboard_kiosk e9b5
 desktop_windows e30c
 desktop_access_disabled e99d
+desktop_cloud f3db
 important_devices e912
 desktop_mac e30b
 laptop_chromebook e31f
@@ -1192,7 +1203,6 @@ devices_wearables f6ab
 smartphone_camera f44e
 dual_screen f6cf
 rear_camera f6c2
-pixel_9_pro_fold f3f0
 camera_front e3b1
 camera_rear e3b2
 stay_current_landscape e0d3
@@ -1212,6 +1222,7 @@ devices_off f7a5
 phonelink_off e327
 devices_other e337
 broadcast_on_home f8f8
+laptop_car f3cd
 vibration e62d
 web_stories e595
 screen_rotation e1c1
@@ -1310,6 +1321,7 @@ shoppingmode efb7
 filter_alt ef4f
 filter_list_alt e94e
 filter_alt_off eb32
+filter_arrow_right f3d1
 bloodtype efe4
 water_drop e798
 water_voc f87b
@@ -1404,6 +1416,7 @@ edit_notifications e525
 wifi_notification f670
 notifications_unread f4fe
 auto_stories e666
+book_ribbon f3e7
 menu_book ea19
 import_contacts e0e0
 dictionary f539
@@ -1411,6 +1424,8 @@ book_3 f53d
 book_2 f53e
 book_5 f53b
 book_4 f53c
+book_6 f3df
+book_4_spark f3e0
 hourglass_full e88c
 hourglass_empty e88b
 hourglass ebff
@@ -1925,6 +1940,7 @@ maximize e930
 remove e15b
 check_indeterminate_small f88a
 add e145
+add_2 f3dd
 close e14c
 close e5cd
 close_small f508
@@ -2302,6 +2318,7 @@ flag e16e
 flag e3a0
 flag ea1a
 flag f0c6
+flag_check f3d8
 tour ef75
 sports_score f06e
 personal_places e703
@@ -2492,6 +2509,7 @@ restaurant_menu e561
 flatware f00c
 restaurant e56c
 no_meals f1d6
+fork_spoon f3e4
 gate e277
 dresser e210
 celebration ea65
@@ -2591,6 +2609,7 @@ lightbulb e0f0
 lightbulb e90f
 light_off e9b8
 tips_and_updates e79a
+lightbulb_2 f3e3
 emoji_objects ea24
 shelves f86e
 pallet f86a
@@ -2858,6 +2877,7 @@ cloud f15b
 cloud f15c
 cloud_off e2c1
 cloud_done e2bf
+cloud_alert f3cc
 backup e864
 cloud_upload e2c3
 cloud_download e2c0
@@ -3124,6 +3144,8 @@ arrow_left e5de
 arrow_right e5df
 switch_left f1d1
 switch_right f1d2
+arrow_menu_open f3d2
+arrow_menu_close f3d3
 network_ping ebca
 timeline e922
 insights f092
@@ -3292,6 +3314,9 @@ ar_stickers e983
 api f1b7
 database f20e
 database_off f414
+database_upload f3dc
+host f3d9
+hard_disk f3da
 stat_0 e697
 filter_retrolux e3e1
 newsstand e9c4
@@ -3389,7 +3414,9 @@ group e7fb
 group e7fc
 group ea21
 group_off e747
+group_search f3ce
 productivity e296
+simulation f3e1
 interpreter_mode e83b
 adaptive_audio_mic f4cc
 adaptive_audio_mic_off f4cb
@@ -3668,4 +3695,3 @@ flutter f1dd
 google_wifi e840
 google_wifi f579
 brand_family f4f1
-reg_logo_ift f3ef
