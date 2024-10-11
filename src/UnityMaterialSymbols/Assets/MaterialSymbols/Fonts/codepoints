@@ -61,7 +61,9 @@ space_dashboard e66b
 dns e875
 table_view f1be
 table f191
+table_edit f3c6
 table_eye f466
+table_convert f3c7
 view_sidebar f114
 border_all e228
 view_comfy e42a
@@ -74,6 +76,9 @@ view_comfy_alt eb73
 view_cozy eb75
 auto_awesome_mosaic e660
 browse eb13
+tile_large f3c3
+tile_small f3c1
+tile_medium f3c2
 flex_wrap f776
 flex_no_wrap f777
 flex_direction f778
@@ -402,6 +407,7 @@ travel_explore e2db
 language e894
 bring_your_own_ip e016
 captive_portal f728
+globe_book f3c9
 emoji_language f4cd
 donut_small e918
 donut_large e917
@@ -675,6 +681,7 @@ exposure e3ca
 exposure e3f6
 contrast_square f4a0
 compare e3b9
+text_compare f3c5
 tv_guide e1dc
 post e705
 photo_prints efb2
@@ -872,6 +879,7 @@ iframe f71b
 iframe_off f71c
 problem e122
 two_pager f51f
+two_pager_store f3c4
 ambient_screen f6c4
 thumbnail_bar f734
 screenshot_keyboard f7d3
@@ -957,6 +965,7 @@ folder_copy ebbd
 folder_data f586
 folder_eye f3d5
 folder_check_2 f3d6
+folder_code f3c8
 perm_media e8a7
 folder_supervised f774
 folder_managed f775
@@ -1032,6 +1041,7 @@ comment e24c
 comments_disabled e7a2
 chat_add_on f0f3
 chat_paste_go f6bd
+chat_paste_go_2 f3cb
 lyrics ec0b
 contact_support e94c
 maps_ugc ef58
@@ -2759,6 +2769,7 @@ loupe e402
 data_exploration e76f
 duo e9a5
 map e55b
+map_search f3ca
 panorama_photosphere e9c9
 panorama_wide_angle e40f
 panorama_horizontal e40d
