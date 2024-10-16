@@ -79,6 +79,9 @@ browse eb13
 tile_large f3c3
 tile_small f3c1
 tile_medium f3c2
+widget_small f3b9
+widget_width f3b8
+widget_medium f3ba
 flex_wrap f776
 flex_no_wrap f777
 flex_direction f778
@@ -110,6 +113,7 @@ move_location e741
 distance f6ea
 home_pin f14d
 local_see e557
+multiple_airports efab
 explore_nearby e538
 share_location f05f
 file_map e2c5
@@ -303,6 +307,7 @@ schedule e8b5
 schedule e924
 schedule efd6
 browse_gallery ebd1
+share_eta e5f7
 nest_clock_farsight_digital f8bc
 nest_clock_farsight_analog f8bb
 history_toggle_off f17d
@@ -552,6 +557,8 @@ upi_pay f3cf
 av1 f4b0
 avc f4af
 markdown f552
+file_png f3bc
+file_json f3bb
 chrome_reader_mode e86d
 18_up_rating f8fd
 logo_dev ead6
@@ -620,6 +627,8 @@ ifl e025
 stairs f1a9
 chart_data e473
 escalator f1a1
+expansion_panels e600
+expansion_panels ef90
 code_blocks f84d
 keyboard_capslock_badge f7de
 position_top_right f709
@@ -642,6 +651,7 @@ developer_guide e99e
 outbox_alt eb17
 nfc e1bb
 heat_pump ec18
+square_dot f3b3
 dataset f8ee
 dataset_linked f8ef
 move_to_inbox e168
@@ -811,9 +821,11 @@ apk_document f88e
 file_save f17f
 file_save_off e505
 file_open eaf3
+file_export f3b2
 edit_document f88c
 apk_install f88f
 insert_page_break eaca
+files ea85
 text_to_speech f1bc
 speech_to_text f8a7
 text_snippet f1c6
@@ -861,6 +873,7 @@ float_landscape_2 f45c
 fullscreen_portrait f45a
 splitscreen_portrait f458
 splitscreen_landscape f459
+split_scene f3bf
 picture_in_picture_small f54d
 picture_in_picture_medium f54e
 picture_in_picture_large f54f
@@ -1018,6 +1031,7 @@ chat e0b7
 chat e0c9
 add_comment e266
 rate_review e560
+rate_review_rtl e706
 sms e0d8
 sms e625
 video_chat f8a0
@@ -1111,6 +1125,7 @@ jamboard_kiosk e9b5
 desktop_windows e30c
 desktop_access_disabled e99d
 desktop_cloud f3db
+desktop_cloud_stack f3be
 important_devices e912
 desktop_mac e30b
 laptop_chromebook e31f
@@ -1608,6 +1623,8 @@ text_select_move_up f736
 text_select_move_down f739
 flip_to_front e883
 copy_all e2ec
+ink_selection e6d4
+ink_selection ef52
 flip_to_back e882
 remove_selection e9d5
 photo_size_select_large e433
@@ -2261,6 +2278,8 @@ motorcycle e91b
 two_wheeler e9f9
 pedal_bike eb29
 electric_bike eb1b
+moped ea72
+moped eb28
 electric_moped eb1d
 snowmobile e503
 directions_car e531
@@ -2532,6 +2551,7 @@ strategy f5df
 mountain_flag f5e2
 mystery f5e1
 chess f5e7
+chess_pawn f3b6
 domino_mask f5e4
 smart_toy f06c
 robot f882
@@ -2783,6 +2803,7 @@ qr_code_scanner f206
 barcode e70b
 barcode_scanner e70c
 document_scanner e5fa
+identity_aware_proxy e2dd
 password f042
 password_2 f4a9
 password_2_off f4a8
@@ -2868,6 +2889,7 @@ pet_supplies efb1
 cruelty_free e799
 sound_detection_dog_barking f149
 raven f555
+owl f3b4
 potted_plant f8aa
 grass f205
 local_florist e545
@@ -3059,6 +3081,7 @@ media_output f4f2
 media_output_off f4f3
 google_home_devices e715
 audio_video_receiver f5d3
+books_movies_and_music ef82
 piano e521
 piano_off e520
 mic_external_on ef5a
@@ -3371,6 +3394,7 @@ box_edit f5a6
 box_add f5a5
 token ea25
 borg f40d
+identity_platform ebb7
 account_circle e853
 account_circle efd7
 account_circle f20b
@@ -3428,6 +3452,7 @@ group_off e747
 group_search f3ce
 productivity e296
 simulation f3e1
+server_person f3bd
 interpreter_mode e83b
 adaptive_audio_mic f4cc
 adaptive_audio_mic_off f4cb
@@ -3466,6 +3491,7 @@ psychology_alt f8ea
 psychology ea4a
 ent e0aa
 cognition e09f
+cognition_2 f3b5
 mindfulness f6e0
 for_you e9ac
 local_library e54b
@@ -3487,6 +3513,8 @@ blur_short e8cf
 trail_length eb5e
 trail_length_medium eb63
 trail_length_short eb6d
+network_intelligence efac
+threat_intelligence eaed
 network_intelligence_update f5f5
 network_intelligence_history f5f6
 visibility e417
@@ -3705,4 +3733,5 @@ home_app_logo e295
 flutter f1dd
 google_wifi e840
 google_wifi f579
+docs ea7d
 brand_family f4f1
