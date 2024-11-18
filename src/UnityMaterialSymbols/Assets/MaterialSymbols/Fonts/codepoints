@@ -416,6 +416,7 @@ bring_your_own_ip e016
 captive_portal f728
 globe_book f3c9
 emoji_language f4cd
+planet f387
 donut_small e918
 donut_large e917
 data_usage e1af
@@ -659,6 +660,7 @@ dataset_linked f8ef
 move_to_inbox e168
 outbox ef5f
 inbox e156
+inbox_text f399
 inbox_customize f859
 bottom_app_bar e730
 bottom_drawer e72d
@@ -700,6 +702,7 @@ photo_prints efb2
 animated_images f49a
 stack_hexagon f41c
 photo_auto_merge f530
+cards_star f375
 note_stack_add f563
 note_stack f562
 sticky_note e9e8
@@ -763,6 +766,7 @@ content_paste_search ea9b
 markdown_paste f554
 lab_profile e104
 diagnosis e0a8
+fit_page_height f397
 book e865
 book e86e
 photo_album e411
@@ -833,6 +837,7 @@ speech_to_text f8a7
 text_snippet f1c6
 save e161
 save_as eb60
+save_clock f398
 feed f009
 news e032
 summarize f071
@@ -1262,6 +1267,7 @@ empty_dashboard f844
 shopping_basket e8cb
 local_mall e54c
 shopping_bag f1cc
+shopping_bag_speed f39a
 medical_services f109
 work e8f9
 work e943
@@ -1442,6 +1448,10 @@ notification_add e399
 edit_notifications e525
 wifi_notification f670
 notifications_unread f4fe
+siren f3a7
+siren_open f3a5
+siren_check f3a6
+siren_question f3a4
 auto_stories e666
 book_ribbon f3e7
 menu_book ea19
@@ -1637,6 +1647,13 @@ move_selection_up f711
 move_selection_right f712
 move_selection_left f713
 move_selection_down f714
+edit_arrow_up f37f
+sync_arrow_up f37b
+clock_arrow_up f381
+timer_arrow_up f377
+sync_arrow_down f37c
+clock_arrow_down f382
+timer_arrow_down f378
 arrow_back_ios e5e0
 arrow_back_ios_new e2ea
 arrow_forward_ios e5e1
@@ -1799,6 +1816,8 @@ switch_access_shortcut_add e7e2
 published_with_changes f232
 zoom_in_map eb2d
 zoom_out_map e56b
+arrows_input f394
+arrows_output f393
 open_with e89f
 drag_pan f71e
 recenter f4c0
@@ -2313,6 +2332,8 @@ forklift f868
 auto_towing e71e
 rv_hookup e642
 local_shipping e558
+delivery_truck_bolt f3a2
+delivery_truck_speed f3a1
 electric_rickshaw eb1e
 fire_truck f8f2
 airport_shuttle eb3c
@@ -3029,6 +3050,7 @@ video_call e070
 missed_video_call e073
 missed_video_call f0ce
 emergency_recording ebf4
+videocam_alert f390
 tamper_detection_on f8c8
 tamper_detection_off e82e
 hangout_video e0c1
@@ -3054,6 +3076,7 @@ spoke e9a7
 scatter_plot e268
 account_tree e97a
 lan eb2f
+flowchart f38d
 family_history e0ad
 schema e4fd
 mitre f547
@@ -3066,9 +3089,15 @@ route eacd
 device_hub e335
 polyline ebbb
 hub e9f4
-matter e907
 tenancy f0e3
 network_node f56e
+graph_1 f3a0
+graph_2 f39f
+graph_3 f39e
+graph_4 f39d
+graph_5 f39c
+graph_6 f39b
+matter e907
 component_exchange f1e7
 headphones e310
 headphones f01f
@@ -3103,6 +3132,7 @@ repeat_one_on e9d7
 music_cast eb1a
 music_note e3a1
 music_note e405
+music_note_add f391
 music_off e440
 media_bluetooth_on f032
 media_bluetooth_off f031
@@ -3142,6 +3172,7 @@ mic_off e02b
 auto_detect_voice f83e
 mic_double f5d1
 settings_voice e8c8
+mic_alert f392
 360 e577
 star e838
 star e83a
@@ -3551,6 +3582,9 @@ swipe_up eb2e
 swipe_down eb53
 swipe_vertical eb51
 touch_app e913
+touch_long f38a
+touch_double f38b
+touch_triple f389
 reminder e695
 reminder e6c6
 pan_tool e925
