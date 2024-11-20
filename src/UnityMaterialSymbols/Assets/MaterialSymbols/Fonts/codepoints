@@ -39,10 +39,13 @@ view_carousel e8eb
 amp_stories ea13
 view_day e8ed
 calendar_view_day e936
+page_footer f383
+page_header f384
 view_object_track f432
 view_headline e8ee
 view_column e8ec
 view_stream e8f2
+view_apps f376
 add_row_above f423
 add_row_below f422
 add_column_left f425
@@ -767,6 +770,7 @@ markdown_paste f554
 lab_profile e104
 diagnosis e0a8
 fit_page_height f397
+fit_page_width f396
 book e865
 book e86e
 photo_album e411
@@ -829,6 +833,7 @@ file_save_off e505
 file_open eaf3
 file_export f3b2
 edit_document f88c
+document_search f385
 apk_install f88f
 insert_page_break eaca
 files ea85
@@ -986,6 +991,7 @@ folder_data f586
 folder_eye f3d5
 folder_check_2 f3d6
 folder_code f3c8
+folder_info f395
 perm_media e8a7
 folder_supervised f774
 folder_managed f775
@@ -1469,6 +1475,7 @@ hourglass ebff
 hourglass_top ea5b
 hourglass_bottom ea5c
 hourglass_disabled ef53
+hourglass_pause f38c
 battery_0_bar ebdc
 battery_vert_005 f8b1
 battery_1_bar ebd9
@@ -1515,6 +1522,7 @@ fullscreen e5d0
 screenshot_region f7d2
 fit_screen ea10
 screenshot_frame f677
+screenshot_frame_2 f374
 crop_free e3c2
 pageless f509
 filter_center_focus e3dc
@@ -1648,12 +1656,17 @@ move_selection_right f712
 move_selection_left f713
 move_selection_down f714
 edit_arrow_up f37f
+edit_arrow_down f380
 sync_arrow_up f37b
 clock_arrow_up f381
 timer_arrow_up f377
 sync_arrow_down f37c
 clock_arrow_down f382
 timer_arrow_down f378
+thermostat_arrow_up f379
+thermostat_arrow_down f37a
+hourglass_arrow_up f37d
+hourglass_arrow_down f37e
 arrow_back_ios e5e0
 arrow_back_ios_new e2ea
 arrow_forward_ios e5e1
@@ -1961,6 +1974,7 @@ playlist_add e03b
 playlist_add_check e065
 playlist_remove eb80
 edit_note e745
+skull_list f370
 patient_list e653
 data_info_alert f7f5
 data_check f7f2
@@ -2068,6 +2082,7 @@ text_increase eae2
 spellcheck e8ce
 handwriting_recognition eb02
 match_case f6f1
+match_case_off f36f
 match_word f6f0
 sort_by_alpha e053
 text_rotate_up e93a
@@ -2938,6 +2953,7 @@ cloud_alert f3cc
 backup e864
 cloud_upload e2c3
 cloud_download e2c0
+cloud_lock f386
 weather_snowy e2cd
 cloudy_snowing e810
 foggy e818
@@ -3384,6 +3400,7 @@ api f1b7
 database f20e
 database_off f414
 database_upload f3dc
+database_search f38e
 host f3d9
 hard_disk f3da
 stat_0 e697
@@ -3540,6 +3557,7 @@ extension e87b
 extension_off e4f5
 send_time_extension eadb
 toys_and_games efc2
+brick f388
 diamond ead5
 web_traffic ea03
 motion_blur f0d0
@@ -3552,6 +3570,7 @@ network_intelligence efac
 threat_intelligence eaed
 network_intelligence_update f5f5
 network_intelligence_history f5f6
+network_intel_node f371
 visibility e417
 visibility e8f4
 visibility_off e8f5
