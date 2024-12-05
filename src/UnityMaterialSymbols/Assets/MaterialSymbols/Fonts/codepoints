@@ -2360,6 +2360,7 @@ no_transfer f1d5
 directions_railway e534
 directions_railway eff8
 railway_alert e9d1
+bus_railway f36b
 directions_railway_2 f462
 railway_alert_2 f461
 tram e571
@@ -2376,6 +2377,8 @@ gondola_lift f476
 trolley_cable_car f46e
 directions_boat e532
 directions_boat eff5
+boat_railway f36c
+boat_bus f36d
 tire_repair ebc8
 rocket eba5
 rocket_launch eb9b
@@ -3395,6 +3398,7 @@ editor_choice f528
 trophy e71a
 trophy ea23
 rewarded_ads efb6
+crown ecb3
 ar_stickers e983
 api f1b7
 database f20e
