@@ -232,6 +232,7 @@ assistant_direction e988
 playlist_add_check_circle e7e6
 playlist_add_circle e7e5
 build_circle ef48
+lock_open_circle f361
 charger e2ae
 lightbulb_circle ebfe
 no_adult_content f8fe
@@ -409,6 +410,7 @@ shutter_speed_add f57e
 public e80b
 vpn_lock e62f
 public_off f1ca
+globe_location_pin f35d
 south_america e7e4
 globe e64c
 globe_uk f798
@@ -589,6 +591,7 @@ dialogs e99f
 subheader e9ea
 dropdown e9a4
 article ef42
+article_person f368
 overview e4a7
 add_notes e091
 other_admission e47b
@@ -656,6 +659,7 @@ package e48f
 developer_guide e99e
 outbox_alt eb17
 nfc e1bb
+nfc_off f369
 heat_pump ec18
 square_dot f3b3
 dataset f8ee
@@ -665,6 +669,9 @@ outbox ef5f
 inbox e156
 inbox_text f399
 inbox_customize f859
+inbox_text_share f35c
+inbox_text_person f35e
+inbox_text_asterisk f360
 bottom_app_bar e730
 bottom_drawer e72d
 team_dashboard e013
@@ -1454,6 +1461,7 @@ notification_add e399
 edit_notifications e525
 wifi_notification f670
 notifications_unread f4fe
+notification_settings f367
 siren f3a7
 siren_open f3a5
 siren_check f3a6
@@ -2881,6 +2889,11 @@ ink_pen e6d3
 brush e3ae
 stylus_note f603
 stylus f604
+stylus_pen f363
+stylus_brush f366
+stylus_pencil f362
+stylus_highlighter f364
+stylus_fountain_pen f365
 format_paint e243
 highlight e25f
 format_color_fill e23a
