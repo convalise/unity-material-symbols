@@ -341,6 +341,7 @@ history_2 f3e6
 alarm e190
 alarm e191
 alarm e855
+alarm_pause f35b
 alarm_add e193
 alarm_add e856
 snooze e046
@@ -931,6 +932,7 @@ auto_awesome_motion e661
 stack f609
 stack_star f607
 stack_off f608
+stack_group f359
 surround_sound e049
 confirmation_number e638
 local_activity e53f
@@ -2736,6 +2738,7 @@ energy e9a6
 power e63c
 power_off e646
 electrical_services f102
+plug_connect f35a
 bolt ea0b
 electric_bolt ec1c
 lightning_stand efa4
