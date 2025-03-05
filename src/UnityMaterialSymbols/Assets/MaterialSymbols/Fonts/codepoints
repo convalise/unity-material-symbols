@@ -420,6 +420,7 @@ travel_explore e2db
 language e894
 bring_your_own_ip e016
 captive_portal f728
+vpn_lock_2 f350
 globe_book f3c9
 emoji_language f4cd
 planet f387
@@ -965,6 +966,7 @@ transition_chop f50e
 text_ad e728
 contextual_token f486
 contextual_token_add f485
+voicemail_2 f352
 pip_exit f70d
 pip f64d
 pin_end e767
@@ -1091,6 +1093,7 @@ filter_frames e3de
 business_messages ef84
 subtitles e048
 subtitles_off ef72
+subtitles_gear f355
 tab e8d8
 photo_camera e3b0
 photo_camera e412
@@ -1462,6 +1465,7 @@ notifications_off e7f6
 notification_add e399
 edit_notifications e525
 wifi_notification f670
+notification_sound f353
 notifications_unread f4fe
 notification_settings f367
 siren f3a7
@@ -1870,6 +1874,7 @@ open_in_browser e89d
 output ebbe
 move_item f1ff
 switch_access_2 f506
+switch_access_3 f34d
 fit_width f779
 fit_page f77a
 align_horizontal_center e00f
@@ -2341,6 +2346,8 @@ minor_crash ebf1
 no_crash ebf0
 bluetooth_drive efe5
 local_taxi e559
+car_gear f337
+car_lock f336
 taxi_alert ef74
 ambulance f803
 car_crash ebf2
@@ -2351,6 +2358,7 @@ car_rental ea55
 car_repair ea56
 commute e940
 emoji_transportation ea1f
+car_fan_recirculate f338
 agriculture ea79
 front_loader f869
 forklift f868
@@ -2409,6 +2417,7 @@ flashlight_off f00a
 shower f061
 sprinkler e29a
 air_freshener e2ca
+fragrance f345
 self_care f86d
 health_and_beauty ef9d
 air_purifier_gen e829
@@ -2585,6 +2594,7 @@ local_bar e540
 no_drinks f1a5
 nightlife ea62
 room_service eb49
+chef_hat f357
 restaurant_menu e556
 restaurant_menu e561
 flatware f00c
@@ -2886,6 +2896,7 @@ ink_highlighter e6d1
 format_ink_highlighter f82b
 ink_highlighter_move f524
 colorize e3b8
+dropper_eye f351
 draw e746
 ink_marker e6d2
 ink_pen e6d3
@@ -2997,6 +3008,7 @@ night_sight_max f6c3
 night_sight_auto f1d7
 night_sight_auto_off f1f9
 sleep e213
+moon_stars f34f
 sleep_score f6b7
 verified e031
 verified ef76
@@ -3132,6 +3144,7 @@ graph_3 f39e
 graph_4 f39d
 graph_5 f39c
 graph_6 f39b
+graph_7 f346
 matter e907
 component_exchange f1e7
 headphones e310
@@ -3184,6 +3197,7 @@ hearing e023
 hearing_disabled f104
 hearing_aid f464
 hearing_aid_disabled f3b0
+ear_sound f356
 voice_selection f58a
 voice_selection_off f42c
 audio_description f58c
@@ -3370,6 +3384,14 @@ airwave f154
 emergency_heat_2 f4e5
 air efd8
 water_lux f874
+fan_focus f334
+fan_indirect f333
+car_mirror_heat f335
+windshield_defrost_rear f329
+windshield_defrost_front f32a
+windshield_heat_front f328
+hvac_max_defrost f332
+steering_wheel_heat f32b
 vpn_key e0da
 vpn_key_off eb7a
 vpn_key_alert f6cc
@@ -3700,6 +3722,7 @@ directions_bike e52f
 accessibility_new e92c
 conditions e0a0
 settings_accessibility f05d
+accessible_menu f34e
 guardian f4c1
 person_play f7fd
 person_celebrate f7fe
@@ -3765,6 +3788,24 @@ airline_seat_legroom_reduced e635
 airline_seat_recline_extra e636
 airline_seat_recline_normal e637
 flight_class e7cb
+seat_cool_left f331
+seat_cool_right f330
+seat_heat_left f32f
+seat_heat_right f32e
+seat_vent_left f32d
+seat_vent_right f32c
+car_fan_low_left f33e
+car_fan_low_right f33c
+car_fan_mid_left f33b
+car_fan_mid_right f339
+car_fan_low_mid_left f33d
+car_fan_mid_low_right f33a
+car_defrost_left f344
+car_defrost_right f33f
+car_defrost_low_right f342
+car_defrost_low_left f343
+car_defrost_mid_right f340
+car_defrost_mid_low_left f341
 flight e539
 airplanemode_active e195
 airplanemode_active e53d
