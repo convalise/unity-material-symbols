@@ -1251,6 +1251,10 @@ stream_apps f79f
 tap_and_play e62b
 devices_wearables f6ab
 smartphone_camera f44e
+mobile_screensaver f321
+mobile_loupe f322
+mobile_hand f323
+mobile_speaker f320
 dual_screen f6cf
 rear_camera f6c2
 camera_front e3b1
@@ -2889,6 +2893,8 @@ edit e3c9
 edit f035
 edit f097
 edit_off e950
+wand_shine f31f
+wand_stars f31e
 edit_square f88d
 drive_file_rename_outline e9a2
 border_color e22b
@@ -3155,6 +3161,10 @@ earbuds f003
 cable efe6
 earbuds_battery f004
 headphones_battery f020
+earbuds_2 f324
+earbud_left f326
+earbud_right f325
+earbud_case f327
 speaker e32d
 speaker_group e32e
 media_output f4f2
@@ -3233,6 +3243,8 @@ star_half e839
 hotel_class e743
 star_rate f0ec
 star_rate_half ec45
+stars_2 f31c
+star_shine f31d
 kid_star f526
 family_star f527
 settings_power e8c6
