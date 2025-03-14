@@ -13,55 +13,59 @@ Supported Unity versions are 2017 or higher.
 
 <a href='https://raw.githubusercontent.com/convalise/unity-material-symbols/master/doc/sample-1.png'><img src='doc/sample-1.png' width='30%'/></a> <a href='https://raw.githubusercontent.com/convalise/unity-material-symbols/master/doc/sample-2.png'><img src='doc/sample-2.png' width='30%'/></a> <a href='https://raw.githubusercontent.com/convalise/unity-material-symbols/master/doc/sample-3.png'><img src='doc/sample-3.png' width='30%'/></a>
 
-## Quickstart
+## Note 📌
+This `fork` includes an additional image generation feature for Material Symbols and other notable changes. For more details, see [NOTICE.md](https://github.com/ebukaracer/UnityMaterialSymbols/blob/master/NOTICE.md).
 
-### Import automatically through the Package Manager
+## Installation
+Check out [this](https://github.com/ebukaracer/UnityMaterialSymbols/blob/master/NOTICE.md#Installation) section of the Notice file. 
 
-On the Package Manager, select "Add package from git" and paste the following URL:
+## Usage
 
-```
-https://github.com/convalise/unity-material-symbols.git?path=/src/UnityMaterialSymbols/Assets/MaterialSymbols
-```
-
-### Import manually through a Unity Package
-
-Download the package from the [latest release](https://github.com/convalise/unity-material-symbols/releases/latest) and import into your project as usual.
-
-On Unity 2018 or lower, you might need to delete the `asmdef` files inside the Scripts folder.
-
-### Usage
-
-Simply add the `MaterialSymbol` component to your GameObject and you are good to go.
+Simply add the `MaterialSymbol` component to your UI GameObject and you are good to go.
 
 Alternatively, a new object can be added to the scene by right-clicking on the hierarchy window and selecting `UI > Google > Material Symbol`.
 
-The inspector provides a window to easily select between the available icons.
+The inspector provides a window to easily select between the available symbols or icons.
 
 ## Documentation
 
-The `MaterialSymbol` class inherits from `UnityEngine.UI.Text`, so it has all properties and methods available [here](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html) such as color and raycast target.
+The `MaterialSymbol` class inherits from `UnityEngine.UI.Text`, so it has all properties and methods available [here](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html) such as `color` and `raycast target`.
 
-Each icon is composed by a pair of a [unicode-escaped char](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals) and a boolean representing the glyph code and the fill status respectively.
+Each icon is composed by a pair of a [unicode-escaped char](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals) and a Boolean representing the glyph code and the fill status respectively.
 
-The icon can be set programmatically by setting the `symbol` field with a new `MaterialSymbolData` object:
+The icon can be set programmatically by setting the `Symbol` field with a new `MaterialSymbolData` object:
 ```cs
-materialSymbol.symbol = new MaterialSymbolData('\uEF55', false);
+public class Demo : MonoBehaviour  
+{  
+    private MaterialSymbol _materialSymbol;
+
+	private void Start()  
+	{  
+	    _materialSymbol.Symbol = new MaterialSymbolData('\uEF55', false);  
+	}
+}
 ```
-It can also be set directly by setting the `code` and `fill` properties:
+It can also be set directly by setting the `Code` and `Fill` properties:
 ```cs
-materialSymbol.code = '\uEF55';
-materialSymbol.fill = false;
+_materialSymbol.Code = '\uEF55';  
+_materialSymbol.Fill = false;
 ```
 
-Additionally, a serialized `MaterialSymbolData` field can be used to bring the icon inspector on any class:
+Additionally, a serialized `MaterialSymbolData` field can be used to bring the `Symbol` inspector on any class:
 
 ```cs
-public MaterialSymbolData newIcon;
+public class Demo : MonoBehaviour  
+{  
+    private MaterialSymbol _materialSymbol;
+    
+    [SerializeField]
+    private MaterialSymbolData symbolData;
 
-public void DoSomething()
-{
-    materialSymbol.symbol = newIcon;
-    materialSymbol.color = Color.blue;
+	private void Start()  
+	{  
+		_materialSymbol.Symbol = symbolData;  
+		_materialSymbol.color = Color.blue;
+	}
 }
 ```
 
@@ -100,13 +104,13 @@ While I'm reluctant to include variations in the package as previously explained
 Well, I personally see no advantages in using TMP because it adds a lot of unnecessary overhead to get the same result, but technically speaking, yes you can. You'll need to create the `TMP_FontAsset` using the official methods and manually set the unicode-escaped string to the `TMP_Text` though. For that last part, you can do something like this:
 
 ```cs
-public MaterialSymbolData icon;
+public MaterialSymbolData symbolData;
 public TMP_Text tmp_text;
 
 public void OnValidate()
 {
-    if(tmp_text != null)
-        tmp_text.text = icon.code.ToString();
+    if (tmp_text != null)
+        tmp_text.text = symbolData.Code.ToString();
 
     // Assuming the TMP_Text already has the TMP_FontAsset properly linked.
 }
