@@ -1191,6 +1191,7 @@ photo e432
 image e251
 image e3c4
 image e3f4
+image_arrow_up f317
 hide_image f022
 imagesmode efa2
 satellite e562
@@ -1247,6 +1248,7 @@ phonelink_erase e0db
 phonelink_lock e0dc
 phonelink_ring e0dd
 phonelink_ring_off f7aa
+mobile_sound_2 f318
 stream_apps f79f
 tap_and_play e62b
 devices_wearables f6ab
@@ -3537,6 +3539,7 @@ person_search f106
 record_voice_over e91f
 voice_over_off e94a
 manage_accounts f02e
+person_shield e384
 deployed_code_account f51b
 person_remove ef66
 person_add e7fe
