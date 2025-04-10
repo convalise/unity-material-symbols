@@ -554,6 +554,7 @@ closed_caption_add f4ae
 sd e9dd
 high_quality e024
 hd e052
+3d ed38
 full_hd f58b
 fiber_pin e06a
 fiber_new e05e
@@ -895,6 +896,10 @@ fullscreen_portrait f45a
 splitscreen_portrait f458
 splitscreen_landscape f459
 split_scene f3bf
+split_scene_up f2fc
+split_scene_down f2ff
+split_scene_left f2fe
+split_scene_right f2fd
 picture_in_picture_small f54d
 picture_in_picture_medium f54e
 picture_in_picture_large f54f
@@ -911,6 +916,9 @@ web_asset_off e4f7
 web_asset_off ef47
 iframe f71b
 iframe_off f71c
+tab e8d8
+tab_recent f740
+tab_search f2f2
 problem e122
 two_pager f51f
 two_pager_store f3c4
@@ -920,7 +928,6 @@ screenshot_keyboard f7d3
 magnify_fullscreen f7d5
 magnify_docked f7d6
 reopen_window f708
-tab_recent f740
 back_to_tab f72b
 domain_verification ef4c
 domain_verification_off f7b0
@@ -1094,7 +1101,6 @@ business_messages ef84
 subtitles e048
 subtitles_off ef72
 subtitles_gear f355
-tab e8d8
 photo_camera e3b0
 photo_camera e412
 no_photography f1a8
@@ -1156,6 +1162,8 @@ desktop_mac e30b
 laptop_chromebook e31f
 computer e30a
 computer e31e
+computer_cancel f2f6
+computer_arrow_up f2f7
 sync_saved_locally f820
 screen_search_desktop ef70
 screen_share e0e2
@@ -1207,6 +1215,7 @@ replace_image f450
 replace_video f44f
 settings_cell e8bc
 p2p f52a
+device_band f2f5
 app_blocking ef3f
 system_update e62a
 system_update f058
@@ -1256,6 +1265,9 @@ smartphone_camera f44e
 mobile_screensaver f321
 mobile_loupe f322
 mobile_hand f323
+mobile_hand_left f313
+mobile_hand_left_off f312
+mobile_hand_off f314
 mobile_speaker f320
 dual_screen f6cf
 rear_camera f6c2
@@ -1413,6 +1425,7 @@ encrypted_off f427
 encrypted_add f429
 encrypted_add_circle f42a
 encrypted_minus_circle f428
+shield_watch f30f
 shield_locked f592
 health_and_safety e1d5
 remove_moderator e9d4
@@ -1488,7 +1501,6 @@ book_2 f53e
 book_5 f53b
 book_4 f53c
 book_6 f3df
-book_4_spark f3e0
 hourglass_full e88c
 hourglass_empty e88b
 hourglass ebff
@@ -1537,6 +1549,20 @@ battery_error f7ea
 battery_status_good f67d
 battery_share f67e
 battery_change f7eb
+battery_android_0 f30d
+battery_android_1 f30c
+battery_android_2 f30b
+battery_android_3 f30a
+battery_android_4 f309
+battery_android_5 f308
+battery_android_6 f307
+battery_android_full f304
+battery_android_bolt f305
+battery_android_plus f303
+battery_android_alert f306
+battery_android_share f301
+battery_android_shield f300
+battery_android_question f302
 fullscreen_exit e5d1
 fullscreen e5d0
 screenshot_region f7d2
@@ -2498,20 +2524,20 @@ heart_check f60a
 cardio_load f4b9
 heart_broken eac2
 hr_resting f6ba
-digital_wellbeing ef86
-menstrual_health f6e1
-fertile f6e5
-physical_therapy e11e
-floor f6e4
-azm f6ec
 cardiology e09c
 pulse_alert f501
 relax f6dc
 ecg_heart f6e9
 health_metrics f6e2
+digital_wellbeing ef86
+menstrual_health f6e1
+fertile f6e5
+physical_therapy e11e
+azm f6ec
 bia f6eb
 stress_management f6d9
 eyeglasses f6ee
+floor f6e4
 exercise f6e6
 water_bottle f69d
 water_bottle_large f69e
@@ -2967,6 +2993,7 @@ cruelty_free e799
 sound_detection_dog_barking f149
 raven f555
 owl f3b4
+cannabis f2f3
 potted_plant f8aa
 grass f205
 local_florist e545
@@ -3020,6 +3047,7 @@ moon_stars f34f
 sleep_score f6b7
 verified e031
 verified ef76
+verified_off f30e
 release_alert f654
 brightness_empty f7e8
 award_star f612
@@ -3122,6 +3150,7 @@ fax ead8
 deskphone f7fa
 scanner e329
 router e328
+router_off f2f4
 webhook eb92
 polymer e8ab
 linear_scale e260
@@ -3222,6 +3251,7 @@ filter_hdr e3df
 altitude f873
 landscape_2 f4c4
 landscape_2_off f4c3
+landscape_2_edit f310
 flash_on e3e7
 flash_auto e3e5
 flash_off e3e6
