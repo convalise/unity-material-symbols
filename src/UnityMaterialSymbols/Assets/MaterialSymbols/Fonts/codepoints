@@ -2537,6 +2537,7 @@ azm f6ec
 bia f6eb
 stress_management f6d9
 eyeglasses f6ee
+eyeglasses_2 f2c7
 floor f6e4
 exercise f6e6
 water_bottle f69d
@@ -3238,6 +3239,8 @@ hearing e023
 hearing_disabled f104
 hearing_aid f464
 hearing_aid_disabled f3b0
+hearing_aid_left f2ed
+hearing_aid_disabled_left f2ec
 ear_sound f356
 voice_selection f58a
 voice_selection_off f42c
@@ -3468,6 +3471,7 @@ watch_wake f6a9
 watch_screentime f6ae
 watch_button_press f6aa
 aod_watch f6ac
+watch_arrow f2ca
 watch_check f468
 watch_vibration f467
 fitness_tracker f463
