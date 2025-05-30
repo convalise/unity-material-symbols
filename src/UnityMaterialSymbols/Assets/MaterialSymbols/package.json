@@ -1,6 +1,6 @@
 {
   "name": "com.convalise.unity-material-symbols",
-  "version": "241.0.0",
+  "version": "244.0.0",
   "displayName": "Unity Material Symbols",
   "description": "Simplifies the usage of Google's Material Symbols (Icons) on Unity.",
   "keywords": [ "convalise", "unity", "google", "material", "icons", "symbols" ],

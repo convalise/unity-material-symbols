@@ -1285,6 +1285,7 @@ mobile_arrow_right f05c
 mobile_arrow_right f2d2
 mobile_cancel e0db
 mobile_cancel f2ea
+mobile_wrench f2b0
 mobile_sound e0dd
 mobile_sound f2e8
 mobile_sound_off f2e9
@@ -1463,6 +1464,7 @@ gpp_bad f012
 verified_user e8e8
 verified_user f013
 gpp_maybe f014
+shield_toggle f2ad
 encrypted e593
 encrypted_off f427
 encrypted_add f429
@@ -2209,6 +2211,8 @@ money_off f038
 mintmark efa9
 local_parking e54f
 metro f474
+timer_1 f2af
+timer_2 f2ae
 timer_3 e424
 timer_5_shutter f4b2
 timer_10 e423
@@ -3912,6 +3916,7 @@ travel ef93
 flight_takeoff e905
 flight_land e904
 connecting_airports e7c9
+plane_contrails f2ac
 airline_stops e7d0
 airlines e7ca
 alternate_email e0e6
