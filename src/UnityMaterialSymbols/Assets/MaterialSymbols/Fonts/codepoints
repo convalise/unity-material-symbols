@@ -3170,6 +3170,7 @@ movie e02c
 movie e404
 movie_filter e43a
 movie_edit f840
+movie_speaker f2a3
 movie_off f499
 videocam e04b
 videocam_off e04c
@@ -3508,6 +3509,9 @@ sports_rugby ea2e
 sports_football ea29
 sports_cricket ea27
 sports_tennis ea32
+padel f2a7
+badminton f2a8
+pickleball f2a6
 sports_golf ea2a
 sports ea30
 sports_hockey ea2b
