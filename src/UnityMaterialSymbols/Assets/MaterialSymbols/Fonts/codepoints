@@ -109,6 +109,8 @@ fmd_bad f00e
 where_to_vote e177
 add_location e567
 edit_location e568
+map_pin_heart f298
+map_pin_review f297
 add_location_alt ef3a
 wrong_location ef78
 edit_location_alt e1c5
@@ -751,6 +753,7 @@ calendar_month ebcc
 date_range e916
 calendar_today e935
 perm_contact_calendar e8a3
+calendar_meal f296
 today e8df
 event e24f
 event e878
@@ -886,6 +889,7 @@ card_travel e8f8
 card_membership e8f7
 redeem e8b1
 redeem e8f6
+payment_card f2a1
 magnification_small f83c
 magnification_large f83d
 picture_in_picture e8aa
@@ -1547,6 +1551,7 @@ book_2 f53e
 book_5 f53b
 book_4 f53c
 book_6 f3df
+menu_book_2 f291
 hourglass_full e88c
 hourglass_empty e88b
 hourglass ebff
@@ -2413,6 +2418,7 @@ electric_bike eb1b
 moped ea72
 moped eb28
 electric_moped eb1d
+moped_package f28b
 snowmobile e503
 directions_car e531
 directions_car e613
@@ -2434,6 +2440,12 @@ car_crash ebf2
 car_tag f4e3
 swap_driving_apps e69e
 garage f011
+garage_check f28d
+garage_money f28c
+parking_meter f28a
+parking_sign f289
+parking_valet f288
+subway_walk f287
 car_rental ea55
 car_repair ea56
 commute e940
@@ -2489,6 +2501,7 @@ flag ea1a
 flag f0c6
 flag_check f3d8
 tour ef75
+japanese_flag f283
 sports_score f06e
 personal_places e703
 flag_2 f40f
@@ -2574,6 +2587,7 @@ heart_check f60a
 cardio_load f4b9
 heart_broken eac2
 hr_resting f6ba
+heart_smile f292
 cardiology e09c
 pulse_alert f501
 relax f6dc
@@ -2650,6 +2664,10 @@ local_pizza e552
 rice_bowl f1f5
 bento f1f4
 set_meal f1ea
+washoku f280
+japanese_curry f284
+okonomiyaki f281
+yoshoku f27f
 egg eacc
 egg_alt eac8
 icecream ea69
@@ -2672,6 +2690,7 @@ coffee efef
 coffee_maker eff0
 kettle e2b9
 sports_bar f1f3
+beer_meal f285
 wine_bar f1e8
 local_bar e540
 no_drinks f1a5
@@ -2712,7 +2731,6 @@ signpost eb91
 fence f1f6
 outdoor_garden e205
 balcony e58f
-deck ea42
 meeting_room eb4f
 no_meeting_room eb4e
 auto_meeting_room f6bf
@@ -2738,10 +2756,22 @@ faucet e278
 bathtub ea41
 bath_private f6fa
 hot_tub eb46
+bath_soak f2a0
+bath_bedrock f286
 onsen f6f8
 bath_outdoor f6fb
+mountain_steam f282
 sauna f6f7
 bath_public_large f6f9
+deck ea42
+table_large f299
+chair_counter f29f
+high_chair f29a
+chair_fireplace f29e
+chair_umbrella f29d
+dine_heart f29c
+dine_lamp f29b
+dine_in f295
 countertops f1f7
 table_bar ead2
 table_restaurant eac6
@@ -3057,6 +3087,8 @@ forest ea99
 spa eb4c
 nature e406
 nature_people e407
+playground f28e
+playground_2 f28f
 filter_vintage e3e3
 filter_drama e3dd
 cloud e2bd
@@ -3629,6 +3661,7 @@ voice_over_off e94a
 manage_accounts f02e
 person_shield e384
 deployed_code_account f51b
+person_heart f290
 person_remove ef66
 person_add e7fe
 person_add ea4d
@@ -3774,6 +3807,8 @@ real_estate_agent e73a
 volunteer_activism ea70
 approval_delegation f84a
 approval_delegation_off f2c5
+hand_meal f294
+hand_package f293
 massage f2c2
 concierge f561
 cheer f6a8
