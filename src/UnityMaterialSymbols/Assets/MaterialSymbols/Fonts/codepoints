@@ -240,6 +240,11 @@ build_circle ef48
 lock_open_circle f361
 charger e2ae
 lightbulb_circle ebfe
+nest_farsight_eco f27b
+nest_farsight_cool f27d
+nest_farsight_dual f27c
+nest_farsight_heat f27a
+nest_farsight_seasonal f279
 no_adult_content f8fe
 ev_shadow ef8f
 ev_shadow_minus f57f
@@ -3946,7 +3951,9 @@ car_defrost_right f33f
 car_defrost_low_right f342
 car_defrost_low_left f343
 car_defrost_mid_right f340
+car_defrost_mid_left f278
 car_defrost_mid_low_left f341
+car_defrost_mid_low_right f277
 flight e539
 airplanemode_active e195
 airplanemode_active e53d
