@@ -387,6 +387,7 @@ reset_iso f480
 reset_focus f481
 reset_shutter_speed f47d
 reset_white_balance f47c
+reset_exposure f266
 metabolism e10b
 move e740
 cached e86a
@@ -1180,6 +1181,7 @@ computer e31e
 computer_cancel f2f6
 computer_arrow_up f2f7
 sync_saved_locally f820
+sync_saved_locally_off f264
 screen_search_desktop ef70
 screen_share e0e2
 stop_screen_share e0e3
@@ -1548,6 +1550,7 @@ siren_check f3a6
 siren_question f3a4
 auto_stories e666
 book_ribbon f3e7
+auto_stories_off f267
 menu_book ea19
 import_contacts e0e0
 dictionary f539
@@ -2607,6 +2610,7 @@ bia f6eb
 stress_management f6d9
 eyeglasses f6ee
 eyeglasses_2 f2c7
+eyeglasses_2_sound f265
 floor f6e4
 exercise f6e6
 water_bottle f69d
@@ -2721,10 +2725,20 @@ mountain_flag f5e2
 mystery f5e1
 chess f5e7
 chess_pawn f3b6
+chess_knight f25e
+chess_rook f25b
+chess_bishop f261
+chess_king f25f
+chess_queen f25c
+chess_king_2 f260
+chess_pawn_2 f25d
+chess_bishop_2 f262
 domino_mask f5e4
 smart_toy f06c
 robot f882
 robot_2 f5d0
+drone f25a
+drone_2 f259
 ice_skating e50b
 roller_skating ebcd
 sailing e502
@@ -3807,6 +3821,7 @@ front_hand e769
 eda f6e8
 waving_hand e766
 handshake ebcb
+sign_language_2 f258
 clean_hands f21f
 real_estate_agent e73a
 volunteer_activism ea70
@@ -3994,6 +4009,7 @@ add_to_drive e65c
 drive_export f41d
 crowdsource eb18
 translate e8e2
+translate_indic f263
 streetview e56e
 flutter_dash e00b
 home_app_logo e295
