@@ -2,10 +2,10 @@
 
 [![ko-fi](https://img.shields.io/badge/Buy_Me_a_Coffee-ff5e5b?logo=kofi&logoColor=white)](https://ko-fi.com/convalise/?hidefeed=true&widget=true&embed=true&preview=true)
 
-Add-on that simplifies the usage of Google's **Material Symbols** (previously known as Material Icons) on Unity. The motivation is to have a lightweight set of uniform icons in order to provide the same design throughout the application UI, improving UX.
+Add-on that simplifies the usage of Google's **Material Symbols** (formerly known as Material Icons) in Unity. The goal is to provide a lightweight set of uniform icons to ensure consistent design throughout the application UI and improve UX.
 
-Recommended Unity versions are 2022 or higher.\
-Supported Unity versions are 2017 or higher.
+Recommended Unity version: 2022 or later\
+Supported Unity versions: 2017 or later
 
 <a href='https://raw.githubusercontent.com/convalise/unity-material-symbols/master/doc/preview.png'><img src='doc/preview.png' width='100%'/></a>
 
@@ -17,7 +17,7 @@ Supported Unity versions are 2017 or higher.
 
 ### Import automatically through the Package Manager
 
-On the Package Manager, select "Add package from git" and paste the following URL:
+In the Package Manager, select to install package from git and paste the following URL:
 
 ```
 https://github.com/convalise/unity-material-symbols.git?path=/src/UnityMaterialSymbols/Assets/MaterialSymbols
@@ -25,35 +25,35 @@ https://github.com/convalise/unity-material-symbols.git?path=/src/UnityMaterialS
 
 ### Import manually through a Unity Package
 
-Download the package from the [latest release](https://github.com/convalise/unity-material-symbols/releases/latest) and import into your project as usual.
+Download the package from the [latest release](https://github.com/convalise/unity-material-symbols/releases/latest) and import it into your project as usual.
 
-On Unity 2018 or lower, you might need to delete the `asmdef` files inside the Scripts folder.
+Note: On Unity 2018 or earlier, you might need to delete the `asmdef` files inside the Scripts folder.
 
 ### Usage
 
-Simply add the `MaterialSymbol` component to your GameObject and you are good to go.
+Simply add the `MaterialSymbol` component to your GameObject and you're good to go.
 
-Alternatively, a new object can be added to the scene by right-clicking on the hierarchy window and selecting `UI > Google > Material Symbol`.
+Alternatively, a new object can be added to the scene by right-clicking in the Hierarchy window and selecting `UI > Google > Material Symbol`.
 
 The inspector provides a window to easily select between the available icons.
 
 ## Documentation
 
-The `MaterialSymbol` class inherits from `UnityEngine.UI.Text`, so it has all properties and methods available [here](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html) such as color and raycast target.
+The `MaterialSymbol` class inherits from `UnityEngine.UI.Text`, so it has all the properties and methods available [here](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-Text.html) such as color and raycast target.
 
-Each icon is composed by a pair of a [unicode-escaped char](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals) and a boolean representing the glyph code and the fill status respectively.
+Each icon is made up of two values: a [unicode-escaped char](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals) for the symbol itself, and a boolean to indicate whether it's filled or outlined.
 
-The icon can be set programmatically by setting the `symbol` field with a new `MaterialSymbolData` object:
+The icon can be set programmatically by assigning a new `MaterialSymbolData` object to the `symbol` field:
 ```cs
 materialSymbol.symbol = new MaterialSymbolData('\uEF55', false);
 ```
-It can also be set directly by setting the `code` and `fill` properties:
+It can also be set directly by assigning the `code` and `fill` properties:
 ```cs
 materialSymbol.code = '\uEF55';
 materialSymbol.fill = false;
 ```
 
-Additionally, a serialized `MaterialSymbolData` field can be used to bring the icon inspector on any class:
+Additionally, a serialized `MaterialSymbolData` field can be used to expose the icon inspector in any class:
 
 ```cs
 public MaterialSymbolData newIcon;
@@ -69,35 +69,29 @@ public void DoSomething()
 
 ### 1) What's the difference between "Material Symbols" and "Material Icons"?
 
-The Material Symbols font was introduced in 2022 and is the variable version of the original Material Icons font. This means that supported applications (e.g., web browsers) can take advantage of the variable axes in the Material Symbols font for further refinements and animations. Also, the original Material Icons font has not been updated in many years, most likely being deprecated.
+The Material Symbols font was introduced in 2022 and is the variable version of the original Material Icons font. This means that supported applications (e.g., web browsers) can take advantage of the variable axes in the Material Symbols font for further refinements and animations. Also, the original Material Icons font has not been updated in many years and appears to be no longer maintained.
 
 ### 2) Does Unity support variable fonts?
 
-As of the day this package was created, no, Unity has not yet added support for variable font axes. Due to this limitation, a static version of the Material Symbols font is being used on this project — and it's a lot smaller than the variable version, which is very nice.
+As of the date this package was created, no — Unity has not yet added support for variable font axes. Due to this limitation, a static version of the Material Symbols font is used in this project — and it's much smaller than the variable version, which also helps keep the project lightweight.
 
-### 3) Which font variation the package is based on?
+### 3) Which font variation is the package based on?
 
-This package uses the Sharp style. In oder to provide both filled and non-filled icons two font files are being used, both regular weight, adding a total of about 1.5 MB to the build size.
+This package uses the Sharp style. In order to provide both filled and non-filled icons, two font files are used, both regular weight, adding a total of about 1.5 MB to the build size.
 
 ### 4) Will the package include other variations in the future?
 
-It would not be wise because providing variations will unnecessarily increase the build size, so at least for now only the Sharp style will be included. Also, it kind of defeats the purpose of this package being a **lightweight** source of icons — 1.5 MB is already a lot for font files honestly speaking.
+Including more variations would likely add unnecessary bloat, since each additional style increases the build size. So at least for now, only the Sharp style will be included. Also, that kind of defeats the purpose of this package being a **lightweight** source of icons — 1.5 MB is already quite a lot for font files, practically speaking.
 
 ### 5) Can I replace the included font with a different variation?
 
-Yes, but at your own risk. You're free to download and use any variation you like from any source you want, just make sure to replace both `ttf` files on the package Fonts folder (overwrite with the same name and don't delete the `meta` files). Bear in mind that the codepoints file must match the font version, so depending on your source you'll most likely need to replace it as well.
+To make replacement easier and minimize potential issues, I compile an up-to-date list of recommended font variations available on [this page](URLs.md). These options have a smaller file size than other sources and are compatible with the included codepoints file — so you can swap them in without extra setup.
 
-#### 5.1) Alternative
-
-In order to minimize bad decisions, I've made a list of font variations available for download on [this page](URLs.md). They have a (more) compact file size than other sources and the included codepoints file is already compatible with them.
-
-#### 5.2) Disclaimer
-
-While I'm reluctant to include variations in the package as previously explained, replacing the font with another one is a lot better than having 9 or 21 variations simultaneously included in the build. Besides, the only downside of this decision is the lost ability to mix styles, but mixing styles is bad design anyway :)
+That said, you're still free to use any variation you prefer, from any source, at your own risk. If you go that route, be sure to replace both `ttf` files in the package’s Fonts folder using the same filenames, and don’t delete the `meta` files. Also note that the codepoints file must match the font version — so depending on the source you choose, you'll most likely need to update that as well.
 
 ### 6) Can I use the package with TextMeshPro?
 
-Well, I personally see no advantages in using TMP because it adds a lot of unnecessary overhead to get the same result, but technically speaking, yes you can. You'll need to create the `TMP_FontAsset` using the official methods and manually set the unicode-escaped string to the `TMP_Text` though. For that last part, you can do something like this:
+While TMP is a powerful tool, for this use case it adds more overhead than benefit, in my view. But technically speaking — yes, you can. You'll need to create the `TMP_FontAsset` using the official methods and manually set the unicode-escaped string to the `TMP_Text`. For that last part, you can do something like this:
 
 ```cs
 public MaterialSymbolData icon;
