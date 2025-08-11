@@ -5,6 +5,7 @@ using UnityEngine.UI;
 namespace com.convalise.UnityMaterialSymbols
 {
 
+[HelpURL("https://github.com/convalise/unity-material-symbols?tab=readme-ov-file#documentation")]
 public class MaterialSymbol : Text
 {
 	[SerializeField]

@@ -235,7 +235,8 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			menu.AddItem(styles.gcMenuFocusSearch, allowFocusSearchField, ToggleFocusSearch);
 			menu.AddItem(styles.gcMenuEnableRegex, enableRegexSearch, ToggleRegexSearch);
 			menu.AddSeparator(string.Empty);
-			menu.AddItem(styles.gcMenuAbout, false, OpenAbout);
+			menu.AddItem(styles.gcMenuRepository, false, OpenRepositoryWebsite);
+			menu.AddItem(styles.gcMenuGoogleFonts, false, OpenGoogleFontsWebsite);
 			menu.DropDown(rectSettingsButton);
 		}
 
@@ -360,9 +361,14 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		EditorPrefs.SetBool(keepActiveInViewEPK, allowKeepActiveInView = !allowKeepActiveInView);
 	}
 
-	private void OpenAbout()
+	private void OpenRepositoryWebsite()
 	{
 		Application.OpenURL("https://github.com/convalise/unity-material-symbols");
+	}
+
+	private void OpenGoogleFontsWebsite()
+	{
+		Application.OpenURL("https://fonts.google.com/icons");
 	}
 
 	private void ChangeSort(object i)
@@ -510,7 +516,8 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 		public GUIContent gcMenuFocusSearch { get; private set; }
 		public GUIContent gcMenuEnableRegex { get; private set; }
 		public GUIContent gcMenuKeepView { get; private set; }
-		public GUIContent gcMenuAbout { get; private set; }
+		public GUIContent gcMenuRepository { get; private set; }
+		public GUIContent gcMenuGoogleFonts { get; private set; }
 
 		public GUIStyle gsToolbar { get; private set; }
 		public GUIStyle gsToolbarButton { get; private set; }
@@ -537,7 +544,8 @@ public class MaterialSymbolSelectionWindow : EditorWindow
 			this.gcMenuFocusSearch = new GUIContent("Focus Search Field on Open");
 			this.gcMenuEnableRegex = new GUIContent("Search Using Regular Expression");
 			this.gcMenuKeepView = new GUIContent("Keep Selection in View");
-			this.gcMenuAbout = new GUIContent("About...");
+			this.gcMenuRepository = new GUIContent("Open GitHub Repository...");
+			this.gcMenuGoogleFonts = new GUIContent("Open Material Symbols Library...");
 
 			this.gsToolbarSearchField = new GUIStyle("TextField");
 
