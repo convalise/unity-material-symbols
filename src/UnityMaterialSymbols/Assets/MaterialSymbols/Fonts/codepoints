@@ -2053,6 +2053,9 @@ download_2 f523
 shift_lock f7ae
 shift e5f2
 shift_lock_off f483
+arrow_shape_up eef6
+arrow_shape_up_stack eef7
+arrow_shape_up_stack_2 eef8
 grading ea4f
 format_align_justify e235
 format_align_center e234
