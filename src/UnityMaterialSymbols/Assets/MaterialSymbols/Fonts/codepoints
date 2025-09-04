@@ -1045,6 +1045,7 @@ mail e158
 mail e159
 mail_off f48b
 unsubscribe e0eb
+mail_asterisk eef4
 forward_to_inbox f187
 mail_lock ec0a
 mark_email_unread f18a
@@ -1240,7 +1241,6 @@ replace_video f44f
 mobile_menu e8bc
 mobile_menu f2d1
 p2p f52a
-device_band f2f5
 mobile_block ef3f
 mobile_block f2e5
 mobile_arrow_down e62a
@@ -3181,7 +3181,7 @@ bedtime ef44
 bedtime f159
 bedtime_off e291
 bedtime_off eb76
-nights_stay ea46
+partly_cloudy_night ea46
 partly_cloudy_night f174
 night_sight_max f6c3
 night_sight_auto f1d7
@@ -3651,6 +3651,8 @@ watch_arrow f2ca
 watch_check f468
 watch_vibration f467
 fitness_tracker f463
+device_band f2f5
+fitness_trackers eef1
 military_tech ea3f
 workspace_premium e7af
 license eb04
@@ -3780,6 +3782,7 @@ group_remove e7ad
 groups f233
 groups_2 f8df
 groups_3 f8e0
+family_group eef2
 personal_injury e6da
 person_raised_hand f59a
 user_attributes e708
@@ -3887,6 +3890,7 @@ wash f1b1
 soap f1b2
 sign_language ebe5
 lift_to_talk efa3
+mobile_theft f2a9
 gesture_select f657
 multimodal_hand_eye f41b
 back_hand e764
