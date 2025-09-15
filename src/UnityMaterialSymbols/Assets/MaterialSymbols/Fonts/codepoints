@@ -1073,6 +1073,7 @@ business_chip f84c
 beenhere e52d
 chat_bubble e0ca
 chat_bubble e0cb
+chat_dashed eeed
 chat_error f7ac
 reviews f054
 reviews f07c
@@ -1664,6 +1665,8 @@ motion_sensor_urgent e78e
 motion_sensor_idle e783
 motion_sensor_alert e784
 familiar_face_and_zone e21c
+frame_bug eeef
+frame_exclamation eeee
 frame_person f8a6
 frame_person_off f7d1
 frame_person_mic f4d5
