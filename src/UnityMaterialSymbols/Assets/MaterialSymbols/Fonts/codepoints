@@ -1287,6 +1287,7 @@ screenshot f056
 mobile_lock_portrait e0dc
 mobile_lock_portrait e1bf
 mobile_lock_portrait f2be
+mobile_unlock eeea
 mobile_check e200
 mobile_check e824
 mobile_check f059
@@ -3653,6 +3654,7 @@ watch_button_press f6aa
 aod_watch f6ac
 watch_arrow f2ca
 watch_check f468
+watch_lock eee9
 watch_vibration f467
 fitness_tracker f463
 device_band f2f5
