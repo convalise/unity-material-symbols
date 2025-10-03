@@ -2624,6 +2624,7 @@ heart_minus f883
 heart_check f60a
 cardio_load f4b9
 heart_broken eac2
+heart_arrow eee7
 hr_resting f6ba
 heart_smile f292
 cardiology e09c
@@ -3117,6 +3118,7 @@ shape_recognition eb01
 layers e53b
 layers_clear e53c
 stacks f500
+bookmark_stacks eee8
 all_inclusive eb3d
 masked_transitions e72e
 masked_transitions_add f42b
