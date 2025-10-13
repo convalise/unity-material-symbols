@@ -806,6 +806,7 @@ book e865
 book e86e
 photo_album e411
 play_lesson f047
+passport eec4
 collections_bookmark e431
 quiz f04c
 backup_table ef43
@@ -1826,6 +1827,7 @@ keyboard_arrow_up e316
 expand_less e5ce
 keyboard_arrow_down e313
 keyboard_capslock e318
+chevron_line_up eec3
 stat_2 e699
 stat_minus_2 e69c
 keyboard_double_arrow_down ead0
