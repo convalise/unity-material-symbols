@@ -679,6 +679,7 @@ outbox_alt eb17
 nfc e1bb
 nfc_off f369
 heat_pump ec18
+widget_menu eeb7
 vignette_2 f2b3
 square_dot f3b3
 dataset f8ee
@@ -725,6 +726,8 @@ exposure e3f6
 contrast_square f4a0
 compare e3b9
 text_compare f3c5
+sticker e707
+sticker_add eec2
 tv_guide e1dc
 post e705
 photo_prints efb2
@@ -1095,6 +1098,7 @@ sms e625
 video_chat f8a0
 chat_info f52b
 voice_chat e62e
+voice_chat_off eebe
 mms e618
 auto_read_pause f219
 auto_read_play f216
@@ -1198,6 +1202,10 @@ game_bumper_right eedf
 game_button_zl eed8
 game_button_zr eed7
 game_bumper_left eee0
+game_stick_l3 eed6
+game_stick_r3 eed4
+game_stick_left eed5
+game_stick_right eed3
 security_key f503
 cast e307
 cast_connected e308
@@ -1225,6 +1233,7 @@ screen_search_desktop ef70
 screen_share e0e2
 stop_screen_share e0e3
 browse_activity f8a5
+computer_sound eeb4
 laptop_mac e320
 laptop_windows e321
 monitor ef5b
@@ -1584,6 +1593,8 @@ notification_add e399
 edit_notifications e525
 wifi_notification f670
 notification_sound f353
+notification_audio eec1
+notification_audio_off eec0
 notifications_unread f4fe
 notification_settings f367
 siren f3a7
@@ -1706,6 +1717,7 @@ eye_tracking f4c9
 detection_and_zone e29f
 zone_person_urgent e788
 zone_person_idle e77a
+detection_and_zone_off eebf
 zone_person_alert e781
 indeterminate_question_box f56d
 view_in_ar e9fe
@@ -2655,7 +2667,6 @@ heart_minus f883
 heart_check f60a
 cardio_load f4b9
 heart_broken eac2
-heart_arrow eee7
 hr_resting f6ba
 heart_smile f292
 cardiology e09c
@@ -3135,6 +3146,7 @@ signature f74c
 shape_line f8d3
 draw_abstract f7f8
 draw_collage f7f7
+animation e71c
 shadow e9df
 shadow_add f584
 shadow_minus f583
@@ -3153,7 +3165,6 @@ bookmark_stacks eee8
 all_inclusive eb3d
 masked_transitions e72e
 masked_transitions_add f42b
-animation e71c
 join eaeb
 join f84f
 join_inner eaf4
@@ -3451,6 +3462,7 @@ auto_detect_voice f83e
 mic_double f5d1
 settings_voice e8c8
 mic_alert f392
+mic_gear eeba
 360 e577
 star e838
 star e83a
@@ -3824,6 +3836,7 @@ groups_3 f8e0
 family_group eef2
 personal_injury e6da
 person_raised_hand f59a
+person_text eebd
 user_attributes e708
 spatial_audio ebeb
 spatial_audio_off ebe8
@@ -4082,10 +4095,10 @@ car_defrost_left f344
 car_defrost_right f33f
 car_defrost_low_right f342
 car_defrost_low_left f343
-car_defrost_mid_right f340
-car_defrost_mid_left f278
 car_defrost_mid_low_left f341
 car_defrost_mid_low_right f277
+car_defrost_mid_right f340
+car_defrost_mid_left f278
 flight e539
 airplanemode_active e195
 airplanemode_active e53d
