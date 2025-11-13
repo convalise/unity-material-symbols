@@ -2113,6 +2113,11 @@ format_indent_decrease e23d
 format_indent_increase e23e
 format_image_right f864
 format_image_left f863
+format_image_back eeb0
+format_image_front eead
+format_image_break_left eeaf
+format_image_break_right eeae
+format_image_inline_left eeac
 key_visualizer f199
 density_small eba8
 density_medium eb9e
