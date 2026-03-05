@@ -3280,6 +3280,7 @@ mode_dual f557
 severe_cold ebd3
 mode_cool f166
 mode_cool_off f167
+snowflake ed5b
 snowing e80f
 sunny_snowing e819
 sunny e81a
@@ -4140,8 +4141,8 @@ home_speaker f11c
 android e859
 adb e60e
 family_link eb19
-youtube_activity f85a
 g_translate e927
+youtube_activity f85a
 nest_protect e68e
 nest_thermostat e68f
 add_to_drive e65c
