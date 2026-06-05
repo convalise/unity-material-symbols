@@ -5,6 +5,7 @@ delete_forever e92b
 auto_delete ea4c
 delete_sweep e16c
 search e8b6
+search ef7a
 search_check f800
 zoom_in e8ff
 zoom_out e900
@@ -132,7 +133,9 @@ emergency_share_off f59e
 mode_of_travel e7ce
 moved_location e594
 keep e6aa
+keep e6e5
 keep f026
+keep f027
 keep_public f56f
 push_pin f10d
 keep_off e017
@@ -166,6 +169,7 @@ block f08c
 do_not_disturb_on e15c
 do_not_disturb_on e15d
 do_not_disturb_on e644
+do_not_disturb_on e6a4
 do_not_disturb_on f08f
 do_not_disturb_off e643
 do_not_disturb_off f08e
@@ -181,6 +185,7 @@ expand_circle_up f5d2
 expand_circle_right f591
 offline_pin e90a
 offline_pin_off f4d0
+stars e739
 stars e8d0
 poker_chip f49b
 contactless ea71
@@ -210,6 +215,9 @@ cancel e888
 add_circle e147
 add_circle e148
 add_circle e3ba
+add_circle e6a3
+add_circle e7eb
+add_circle e990
 assistant_navigation e989
 explore e87a
 explore_off e9a8
@@ -433,6 +441,7 @@ globe_uk f798
 globe_asia f799
 travel_explore e2db
 language e894
+language ea07
 bring_your_own_ip e016
 captive_portal f728
 vpn_lock_2 f350
@@ -492,6 +501,7 @@ crop_square e3c1
 crop_square e3c6
 check_box_outline_blank e835
 check_box e834
+check_box e9de
 select_check_box f1fe
 overview_key f7d4
 art_track e060
@@ -595,6 +605,8 @@ background_dot_large f79e
 casino eb40
 insert_chart e24b
 insert_chart e26a
+insert_chart e671
+insert_chart e68d
 insert_chart e801
 insert_chart e85c
 insert_chart f0cc
@@ -608,7 +620,9 @@ toast efc1
 dialogs e99f
 subheader e9ea
 dropdown e9a4
+article e672
 article ef42
+article ef87
 article_person f368
 overview e4a7
 add_notes e091
@@ -619,6 +633,7 @@ source_notes e12d
 article_shortcut f587
 convert_to_text f41f
 list_alt e0ee
+list_alt e677
 list_alt_add f756
 list_alt_check f3de
 clinical_notes e09e
@@ -723,6 +738,7 @@ gradient e3e9
 filter_b_and_w e3db
 exposure e3ca
 exposure e3f6
+contrast_square e6a1
 contrast_square f4a0
 compare e3b9
 text_compare f3c5
@@ -843,6 +859,7 @@ markdown_copy f553
 note e06f
 note e24d
 note e66d
+note e674
 scan f74e
 scan_delete f74f
 heap_snapshot_large f76e
@@ -851,6 +868,7 @@ difference eb7d
 file_copy e173
 file_copy_off f4d8
 heap_snapshot_multiple f76d
+description e683
 description e873
 unknown_document f804
 quick_reference_all f801
@@ -891,6 +909,7 @@ sd_card_alert f057
 sd_card e1c2
 sd_card e623
 sim_card e32b
+sim_card_download e71f
 sim_card_download f068
 no_sim e0cc
 no_sim e1ce
@@ -938,6 +957,8 @@ settings_overscan e8c4
 performance_max e51a
 video_label e071
 web e051
+web e66a
+web e681
 web_asset e069
 web_asset_off e4f7
 web_asset_off ef47
@@ -989,6 +1010,7 @@ rectangle_add eec8
 cancel_presentation e0e9
 pause_presentation e0ea
 image_aspect_ratio e3f5
+image_aspect_ratio e6a6
 present_to_all e0df
 price_change f04a
 local_atm e53e
@@ -1057,6 +1079,7 @@ forward_to_inbox f187
 mail_lock ec0a
 mark_email_unread f18a
 attach_email ea5e
+mark_email_read e9fd
 mark_email_read f18c
 mail_shield f249
 drafts e151
@@ -1082,6 +1105,7 @@ chat_bubble e0ca
 chat_bubble e0cb
 chat_dashed eeed
 chat_error f7ac
+reviews efb5
 reviews f054
 reviews f07c
 sms_failed e626
@@ -1169,6 +1193,7 @@ trackpad_input f4c7
 trackpad_input_2 f409
 trackpad_input_3 f408
 joystick f5ee
+sports_esports e6ec
 sports_esports ea28
 stadia_controller f135
 handheld_controller f4c6
@@ -1262,6 +1287,8 @@ developer_mode_tv e874
 photo_frame f0d9
 photo e410
 photo e432
+photo e679
+photo e693
 image e251
 image e3c4
 image e3f4
@@ -1271,6 +1298,7 @@ hide_image f022
 imagesmode efa2
 satellite e562
 panorama e40b
+panorama e691
 planner_banner_ad_pt e692
 wall_art efcb
 hallway e6f8
@@ -1518,6 +1546,7 @@ invert_colors e891
 invert_colors_off e0c4
 format_color_reset e23b
 cool_to_dry e276
+shield e75b
 shield e9e0
 privacy_tip f0dc
 shield_question f529
@@ -1973,6 +2002,7 @@ undo e166
 prompt_suggestion f4f6
 reply_all e15f
 forward e154
+forward e6a9
 forward f060
 forward f57a
 reply e15e
@@ -2170,8 +2200,11 @@ checklist_rtl e6b3
 rule f1c2
 edit_attributes e578
 priority e19f
+priority efb3
+priority efb4
 done_outline e92f
 check e5ca
+check e668
 done e876
 check_small f88b
 download_done e9aa
@@ -2359,6 +2392,7 @@ hdr_auto_select f01b
 hdr_on_select f01d
 hdr_enhanced_select ef51
 hdr_off_select f01c
+hdr_plus e3f0
 hdr_plus f01e
 hdr_plus_off e3ef
 pin f045
@@ -2407,6 +2441,7 @@ glyphs f8a3
 emoji_symbols ea1e
 widgets e1bd
 category e574
+category e72c
 category_search f437
 interests e7c8
 play_shapes f7fc
@@ -2902,6 +2937,7 @@ weekend e16b
 scene e2a7
 crib e588
 child_friendly eb42
+child_friendly ef80
 stroller f1ae
 no_stroller f1af
 garden_cart f8a9
@@ -2994,6 +3030,7 @@ money_range f245
 account_balance_wallet e850
 account_balance e84f
 assured_workload eb6f
+local_fire_department ea05
 local_fire_department ef55
 water_heater e284
 fireplace ea43
@@ -3323,6 +3360,7 @@ movie_info e02d
 cinematic_blur f853
 movie e02c
 movie e404
+movie e684
 movie_filter e43a
 movie_edit f840
 movie_speaker f2a3
@@ -3478,6 +3516,7 @@ mic_gear eeba
 star e838
 star e83a
 star e885
+star ea06
 star f06f
 star f099
 star f09a
@@ -3777,12 +3816,14 @@ token ea25
 borg f40d
 identity_platform ebb7
 account_circle e853
+account_circle efb0
 account_circle efd7
 account_circle f20b
 no_accounts f03e
 supervised_user_circle e939
 supervised_user_circle_off f60e
 account_box e416
+account_box e6c1
 account_box e851
 assignment_ind e85e
 person_pin e55a
@@ -3826,6 +3867,7 @@ artist e01a
 person_check f565
 person_cancel f566
 person_alert f567
+supervisor_account e1df
 supervisor_account e8d3
 group e7ef
 group e7fb
@@ -3859,6 +3901,8 @@ interactive_space f7ff
 account_child_invert e659
 breastfeeding f856
 account_child e852
+attribution e6ce
+attribution e6d7
 attribution efdb
 contacts_product e999
 social_distance e1cb
