@@ -665,6 +665,7 @@ hvac f10e
 switch e1f4
 slideshow e41b
 settings_applications e8b9
+drive_file_rename e676
 ifl e025
 stairs f1a9
 chart_data e473
@@ -1340,8 +1341,8 @@ mobile_sensor_hi f005
 mobile_sensor_hi f2ef
 mobile_sensor_lo f006
 mobile_sensor_lo f2ee
-dock e30e
-dock f2e0
+mobile_dock e30e
+mobile_dock f2e0
 mobile_share_stack e9c5
 mobile_share_stack f2de
 mobile_3 e325
