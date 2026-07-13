@@ -4183,7 +4183,6 @@ wifi_protected_setup f0fc
 chromecast_2 f17b
 chromecast_device e83c
 home_speaker f11c
-android e859
 adb e60e
 family_link eb19
 g_translate e927
@@ -4203,3 +4202,4 @@ google_wifi e840
 google_wifi f579
 docs ea7d
 brand_family f4f1
+android e859
