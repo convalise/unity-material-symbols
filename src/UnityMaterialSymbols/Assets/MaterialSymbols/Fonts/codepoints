@@ -605,7 +605,6 @@ background_dot_large f79e
 casino eb40
 insert_chart e24b
 insert_chart e26a
-insert_chart e671
 insert_chart e68d
 insert_chart e801
 insert_chart e85c
@@ -620,9 +619,7 @@ toast efc1
 dialogs e99f
 subheader e9ea
 dropdown e9a4
-article e672
 article ef42
-article ef87
 article_person f368
 overview e4a7
 add_notes e091
@@ -633,7 +630,6 @@ source_notes e12d
 article_shortcut f587
 convert_to_text f41f
 list_alt e0ee
-list_alt e677
 list_alt_add f756
 list_alt_check f3de
 clinical_notes e09e
@@ -730,7 +726,6 @@ tab_move f742
 ad_off f7b2
 score e269
 bid_landscape e667
-bid_landscape e678
 bid_landscape_disabled ef81
 sound_detection_glass_break f14a
 image_not_supported f116
@@ -860,7 +855,6 @@ markdown_copy f553
 note e06f
 note e24d
 note e66d
-note e674
 scan f74e
 scan_delete f74f
 heap_snapshot_large f76e
@@ -869,7 +863,6 @@ difference eb7d
 file_copy e173
 file_copy_off f4d8
 heap_snapshot_multiple f76d
-description e683
 description e873
 unknown_document f804
 quick_reference_all f801
@@ -959,7 +952,6 @@ performance_max e51a
 video_label e071
 web e051
 web e66a
-web e681
 web_asset e069
 web_asset_off e4f7
 web_asset_off ef47
@@ -1288,7 +1280,6 @@ developer_mode_tv e874
 photo_frame f0d9
 photo e410
 photo e432
-photo e679
 photo e693
 image e251
 image e3c4
@@ -3361,7 +3352,6 @@ movie_info e02d
 cinematic_blur f853
 movie e02c
 movie e404
-movie e684
 movie_filter e43a
 movie_edit f840
 movie_speaker f2a3
