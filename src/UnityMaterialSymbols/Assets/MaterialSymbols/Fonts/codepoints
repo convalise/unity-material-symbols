@@ -142,6 +142,9 @@ keep_off e017
 keep_off e6f9
 pinboard f3ab
 pinboard_unread f3ac
+check_circle_unread f27e
+task_alt e2e6
+add_task f23a
 fiber_manual_record e061
 fiber_smart_record e062
 toll e8e0
@@ -177,9 +180,6 @@ check_circle e86c
 check_circle e92d
 check_circle f0be
 unpublished f236
-check_circle_unread f27e
-task_alt e2e6
-add_task f23a
 expand_circle_down e7cd
 expand_circle_up f5d2
 expand_circle_right f591
